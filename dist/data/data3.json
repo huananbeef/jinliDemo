@@ -1,0 +1,15 @@
+/* list */
+[
+	{"id":0,"img":"../images/list/001.jpg","name":"金立M7","detail":"6.01英寸超清全面屏，内置双安全加密芯片","price1":"2499","price2":"2799"},
+	{"id":1,"img":"../images/list/002.jpg","name":"大金钢2","detail":"6.0英寸高清全面屏","price1":"1799","price2":""},
+	{"id":2,"img":"../images/list/003.jpg","name":"金立F6","detail":"5.7英寸高清全面屏,四曲面机身","price1":"1399","price2":""},
+	{"id":3,"img":"../images/list/004.jpg","name":"金立金钢3","detail":"5.5英寸高清全面屏，4000mA","price1":"1199","price2":""},
+	{"id":0,"img":"../images/list/001.jpg","name":"金立M7","detail":"6.01英寸超清全面屏，内置双安全加密芯片","price1":"2499","price2":"2799"},
+	{"id":1,"img":"../images/list/002.jpg","name":"大金钢2","detail":"6.0英寸高清全面屏","price1":"1799","price2":""},
+	{"id":2,"img":"../images/list/003.jpg","name":"金立F6","detail":"5.7英寸高清全面屏,四曲面机身","price1":"1399","price2":""},
+	{"id":3,"img":"../images/list/004.jpg","name":"金立金钢3","detail":"5.5英寸高清全面屏，4000mA","price1":"1199","price2":""},
+	{"id":0,"img":"../images/list/001.jpg","name":"金立M7","detail":"6.01英寸超清全面屏，内置双安全加密芯片","price1":"2499","price2":"2799"},
+	{"id":1,"img":"../images/list/002.jpg","name":"大金钢2","detail":"6.0英寸高清全面屏","price1":"1799","price2":""},
+	{"id":2,"img":"../images/list/003.jpg","name":"金立F6","detail":"5.7英寸高清全面屏,四曲面机身","price1":"1399","price2":""},
+	{"id":3,"img":"../images/list/004.jpg","name":"金立金钢3","detail":"5.5英寸高清全面屏，4000mA","price1":"1199","price2":""}
+]

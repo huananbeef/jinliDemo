@@ -1,0 +1,293 @@
+@import '_public.scss';
+/* 正文内容 */
+.sl_wrapper {
+    background: #f1f1f1;
+}
+.sl_wrapper {
+    min-height: 500px;
+    margin-bottom: 20px;
+    margin-top: 52px;
+    _height: 500px;
+}
+
+.sl_header, .sl_wrapper, .sl_footer {
+    display: block;
+    min-width: 960px;
+}
+
+.wrapper {
+    width: 1190px;
+    margin: 0 auto;
+}
+/*广告页*/
+.mob_banner, .mob_listCon {
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+}
+.mob_banner {
+    margin-bottom: 20px;
+    padding-top: 52px;
+    background: none;
+}
+/*列表框*/
+.partssltbar {
+    background: #fff;
+    margin-top: 17px;
+}
+.parts_selc {
+    line-height: 28px;
+    border-bottom: #e9e9e9 1px solid;
+    clear: both;
+    font-size: 14px;
+    padding: 13px 0;
+    margin: 0 20px;
+    position: relative;
+}
+.clr {
+    zoom: 1;
+}
+.parts_selc dt {
+    width: 78px;
+    float: left;
+}
+.parts_selc dd {
+    float: left;
+}
+.parts_selc .checkboxs {
+    width: 100%;
+}
+.parts_selc .checkboxs {
+    float: left;
+    width: 830px;
+}
+.parts_selc .checkboxs a {
+    margin-right: 20px;
+    line-height: 28px;
+    position: relative;
+    padding-left: 18px;
+    cursor: pointer;
+    display: inline-block;
+}
+.parts_selc .checkboxs a.select i.ckbx {
+    background: url(../images/newpartlst.png) no-repeat 0 -134px;
+}
+.parts_selc .checkboxs a i.ckbx {
+    display: block;
+    width: 14px;
+    height: 14px;
+    background: url(../images/newpartlst.png) no-repeat 0 -148px;
+    position: absolute;
+    top: 7px;
+    left: 0;
+    overflow: hidden;
+}
+
+i, cite, em, var, address, dfn {
+    font-style: italic;
+}
+.clr:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.parts_selc dt {
+    width: 78px;
+    float: left;
+}
+
+dt {
+    display: block;
+}
+.parts_selc .checkboxs {
+    width: 100%;
+}
+.parts_selc .checkboxs {
+    float: left;
+    width: 830px;
+}
+.checkboxs a.quee i.order_up {
+    background-position: -10px -12px;
+}
+.checkboxs a.quee i {
+    width: 10px;
+    height: 12px;
+    overflow: hidden;
+    margin-right: 3px;
+    display: inline-block;
+    background: url(../images/newpartlst.png) no-repeat -10px 0;
+    position: absolute;
+    left: 3px;
+    top: 7px;
+}
+.checkboxs a.quee span {
+    display: inline-block;
+    background: none;
+    padding: 0 5px 0 15px;
+    color: #000;
+    position: relative;
+    height: 25px;
+    line-height: 25px;
+}
+.onsale {
+    position: absolute;
+    right: 0px;
+    top: 12px;
+    padding-left: 20px;
+}
+.onsale .ckbx {
+    position: absolute;
+    top: 8px;
+    left: 0;
+    overflow: hidden;
+    display: block;
+    width: 14px;
+    height: 14px;
+    background: url(../images/newpartlst.png) no-repeat 0 -148px;
+}
+
+.onsale em {
+    font-style: normal;
+}
+address, cite, dfn, em, var {
+    font-style: normal;
+}
+
+/*列表页*/
+.mob_pro {
+    position: relative;
+    float: left;
+    width: 297px;
+    border-left: none;
+    border-top: none;
+    border-right: solid #eee 1px;
+    padding: 0;
+    background: #fff;
+    border-bottom: solid #eee 1px;
+    padding-bottom: 20px;
+    height: 470px;
+    overflow: hidden;
+}
+.mob_pro .ui_pimg {
+    display: block;
+    width: 210px;
+    height: 350px;
+    position: relative;
+}
+.mob_pro .ui_pimg {
+    display: block;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    margin: 0 auto;
+    padding-top: 30px;
+    margin-bottom: 10px;
+}
+.mob_pro .ui_pimg img {
+    width: 300px;
+    height: 300px;
+    margin-left: -40px;
+}
+.ui_pimg img {
+    vertical-align: top;
+}
+.mob_pro .ui_pname {
+    font-size: 14px;
+    color: #000;
+    height: 50px;
+    line-height: 25px;
+    overflow: hidden;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+.mob_pro .ui_pname {
+    height: 36px;
+    margin-bottom: 6px;
+}
+.ui_pname {
+    line-height: 18px;
+    overflow: hidden;
+}
+a:link, a:visited {
+    color: #333;
+}
+a:link, a:visited {
+    text-decoration: none;
+    outline: 0;
+}
+.mob_pro .ui_pname .ui_pslogan {
+    display: block;
+    color: #999999;
+    font-size: 14px;
+    font-weight: normal;
+}
+.mob_pro .ui_pslogan {
+    color: #EF4222;
+}
+.mob_pro .mask {
+    width: 100%;
+    background: rgba(239,66,34,.9);
+    bottom: 0;
+    height: 111px;
+}
+.mob_pro .mask {
+    position: absolute;
+    width: 228px;
+    height: 60px;
+    overflow: hidden;
+    left: 0;
+    bottom: 100px;
+    display: none;
+    -ms-filter: progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr='#ef4222', endColorstr='#ef4222');
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr='#ef4222', endColorstr='#ef4222')\8;
+}
+
+.mob_pro .charator {
+    font-size: 14px;
+    font-family: "Microsoft Yahei";
+    color: #fff;
+    line-height: 48px;
+    height: 48px;
+}
+.mob_pro .charator {
+    line-height: 28px;
+    height: 28px;
+    overflow: hidden;
+    text-align: center;
+}
+.mob_pro a.view {
+    display: block;
+    width: 112px;
+    height: 37px;
+    overflow: hidden;
+    margin: 0 auto;
+    background: url(../images/spirite.png) no-repeat -391px -414px;
+    line-height: 37px;
+    padding-right: 20px;
+    text-indent: -9999px;
+}
+.ui_price {
+    font-family: Arial,Helvetica,sans-serif;
+}
+.ui_pprice {
+    font-family: Arial,Helvetica,sans-serif;
+    color: #ef4222;
+    font-size: 18px;
+}
+.mob_pro .ui_pprice_m {
+    font-size: 14px;
+    font-family: "Microsoft Yahei";
+}
+.mob_pro .ui_pprice_m {
+    color: #999;
+    margin-left: 20px;
+    font-family: simsun;
+}
+.mob_pro .ui_pprice_m em {
+    font-family: Arial;
+}
+address, cite, dfn, em, var {
+    font-style: normal;
+}

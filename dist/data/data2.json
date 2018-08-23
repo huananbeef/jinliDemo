@@ -1,0 +1,25 @@
+[
+	[
+		{"id":0,"img":"../images/sp1.jpg","tit0":"金立S10","tit1":"超清全面屏","tit2":"超高性价比","tit3":"4GB+64GB"},
+		{"id":1,"img":"../images/sp2.jpg","tit0":"金立S11","tit1":"前置2000万柔光双摄","tit2":"后置1600万双摄","tit3":"硬件级实时虚化"},
+		{"id":2,"img":"../images/sp3.jpg","tit0":"金立M7","tit1":"6.01英寸超清全面屏","tit2":"内置安全加密芯片","tit3":"后置1600万双摄"}
+	],
+	[
+		
+		{"id":0,"img1":"../images/hr01.png","img2":"../images/hr11.png","title":"金立F6","detail":"5.7英寸高清全面屏，四曲面机身","price":"1399"},
+		{"id":1,"img1":"../images/hr02.png","img2":"../images/hr22.png","title":"S10C","detail":"1600万柔光自拍","price":"1399"},
+		{"id":2,"img1":"../images/hr03.png","img2":"../images/hr33.png","title":"大金钢2","detail":"6.0英寸高清全面屏","price":"1799"},
+		{"id":3,"img1":"../images/hr04.png","img2":"../images/hr44.png","title":"金钢3","detail":"5.7英寸高清全面屏，四曲面机身","price":"1199"},
+		{"id":4,"img1":"../images/hr05.png","img2":"../images/hr55.png","title":"金立M6S Plus","detail":"5.7英寸高清全面屏，四曲面机身","price":"3299"},
+		{"id":5,"img1":"../images/hr06.png","img2":"../images/hr66.png","title":"金立S9","detail":"5.7英寸高清全面屏，四曲面机身","price":"1699"}
+	
+	],
+	[
+		{"id":0,"img":"../images/ea01.jpg","title":"线控自拍杆","detail":"迷你携带,线控美拍","pirce":"49"},
+		{"id":1,"img":"../images/ea02.jpg","title":"Micro USB数据线","detail":"高速数据传输","pirce":"20"},
+		{"id":2,"img":"../images/ea03.jpg","title":"旅行充电器","detail":"流线腰身，高效充电","pirce":"40"},
+		{"id":3,"img":"../images/ea04.jpg","title":"快充充电器","detail":"高速快充，安全节能","pirce":"69"},
+		{"id":4,"img":"../images/ea05.jpg","title":"HiFi耳机","detail":"HI-FI魔音，震撼享受","pirce":"69"},
+		{"id":5,"img":"../images/ea06.jpg","title":"贴膜","detail":"高清透光，耐磨防油污","pirce":"10"}
+	]
+]

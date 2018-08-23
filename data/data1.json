@@ -1,0 +1,37 @@
+[
+	[
+		{"model":"最新","id":0,"class":"hotphone","value":"金立S11S","data":"jl01"},
+		{"id":1,"class":"hotphone","value":"金立S11"},
+		{"id":2,"class":"hotphone","value":"金立M7 Plus"},
+		{"id":3,"class":"hotphone","value":"金立M7"},
+		{"id":4,"class":"","value":"大金钢2"}
+	],
+	[
+		{"model":"M系列","id":0,"class":"","value":"金立M7 Plus","data":"jl02"},
+		{"id":1,"class":"","value":"金立M7"},
+		{"id":2,"class":"","value":"金立M6S Plus"},
+		{"id":3,"class":"","value":"金立2017"},
+		{"id":4,"class":"","value":"金立M6 Plus"},
+		{"id":5,"class":"","value":"金立M6"}
+	],
+	[
+		{"model":"S系列","id":0,"class":"","value":"金立S11S","data":"jl03"},
+		{"id":1,"class":"","value":"金立S11"},
+		{"id":2,"class":"","value":"金立S10"},
+		{"id":3,"class":"","value":"金立S10B"},
+		{"id":4,"class":"","value":"金立S10C"}
+	],
+	[
+		{"model":"金钢系列","id":0,"class":"hotphone","value":"金钢3","data":"jl04"},
+		{"id":1,"class":"","value":"金钢2"},
+		{"id":2,"class":"","value":"大金钢2"}
+	],
+	[
+		{"model":"天鉴系列","id":0,"class":"","value":"天鉴W909","data":"jl05"}
+	],
+	[
+		{"model":"F系列","id":0,"class":"hotphone","value":"金立F6","data":"jl06"},
+		{"id":1,"class":"","value":"金立F109"},
+		{"id":2,"class":"","value":"金立F109L"}
+	]
+]
