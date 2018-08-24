@@ -1,0 +1,310 @@
+@import '_public.scss';
+/*正文内容*/
+#outer, html {
+    height: 100%;
+}
+#outer {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+body {
+    background-color: #f5f5f5;
+    padding: 0;
+    margin: 0;
+}
+
+#outer {
+    background: url(../images/register/pic.png) no-repeat 50%;
+}
+
+:root #middle {
+    vertical-align: middle;
+    position: static;
+}
+.w {
+    width: 100%;
+}
+.pa {
+    position: absolute;
+}
+footer {
+    font-size: 12px;
+    color: #d0d0d0;
+    bottom: 20px;
+}
+.tc {
+    text-align: center;
+}
+address, caption, cite, code, dfn, em, strong, th, var {
+    font-style: normal;
+    font-weight: 400;
+}
+#inner {
+    position: relative;
+    top: -50%;
+}
+.holder {
+    width: 1066px;
+    height: 715px;
+    background: url(../images/register/word.png) no-repeat 94px 154px;
+}
+.pr {
+    position: relative;
+}
+.bc {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.control {
+    width: 343px;
+    height: 520px;
+    background: url(../images/register/bg_middle.png) repeat-y 50%;
+    left: 689px;
+    top: 105px;
+}
+.pa {
+    position: absolute;
+}
+.control .top {
+    width: 343px;
+    height: 11px;
+    left: 0;
+    top: -11px;
+    background: url(../images/register/bg_head.png) no-repeat 50%;
+}
+.control .bottom {
+    width: 343px;
+    height: 12px;
+    left: 0;
+    bottom: -12px;
+    background: url(../images/register/bg_bottom.png) no-repeat 50%;
+}
+.pt1 {
+    padding-top: 1px;
+}
+.pr {
+    position: relative;
+}
+.tc {
+    text-align: center;
+}
+header {
+    height: 223px;
+}
+.mt30 {
+    margin-top: 30px;
+}
+.ib {
+    display: inline-block;
+    zoom: 1;
+}
+header h1 {
+    background: url(../images/register/logo.png) no-repeat 0;
+    width: 110px;
+    height: 110px;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+    font-weight: 400;
+}
+header .change {
+    font-size: 20px;
+}
+.transition {
+    transition: all .5s;
+    -moz-transition: all .5s;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+}
+.mt20 {
+    margin-top: 20px;
+}
+.w {
+    width: 100%;
+}
+.ib {
+    display: inline-block;
+    zoom: 1;
+}
+.none {
+    display: none;
+}
+.tr {
+    text-align: right;
+}
+header .change span {
+    color: #888;
+}
+.ml40 {
+    margin-left: 40px;
+}
+.vt {
+    vertical-align: top;
+}
+.fl, .fr {
+    display: inline;
+}
+.fl {
+    float: left;
+}
+
+header .change {
+    font-size: 20px;
+}
+
+header .change a {
+    color: #ff9000;
+    width: 100px;
+    text-decoration: none;
+    background: url(../images/register/icon_yellow.png) no-repeat 100%;
+}
+
+.pr30 {
+    padding-right: 30px;
+}
+.mr40 {
+    margin-right: 40px;
+}
+
+.transition {
+    transition: all .5s;
+    -moz-transition: all .5s;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+}
+.mt5 {
+    margin-top: 5px;
+}
+
+.none {
+    display: none;
+}
+header ul li.point.selected {
+    background-image: url(../images/register/point_yellow.png);
+}
+header ul li.point {
+    width: 6px;
+    height: 6px;
+    background: url(../images/register/point_gray.png) no-repeat 50%;
+}
+.transition {
+    transition: all .5s;
+    -moz-transition: all .5s;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+}
+.ib {
+    display: inline-block;
+    zoom: 1;
+}
+.vm {
+    vertical-align: middle;
+}
+header ul li.line {
+    height: 1px;
+    width: 115px;
+    background-color: #eee;
+}
+header ul li.point {
+    width: 6px;
+    height: 6px;
+    background: url(/../images/register/point_gray.png) no-repeat 50%;
+}
+
+input {
+    width: 265px;
+    padding: 0 10px;
+    background-color: transparent;
+    font-size: 14px;
+    height: 35px;
+    line-height: 35px;
+    border: 1px solid #d8d8d8;
+    border-radius: 5px;
+}
+button, input, select, textarea {
+    outline: none;
+}
+input.imgCode-input {
+    width: 138px;
+}
+form {
+    display: block;
+}
+.form {
+    margin-top: 30px;
+}
+.vm {
+    vertical-align: middle;
+}
+a.exchange {
+    color: #aaa;
+    font-size: 12px;
+    text-decoration: none;
+}
+img+a {
+    width: 44px;
+}
+input{
+	
+}
+.vm .ml5{
+	display:block;
+}
+.ng-binding{
+	display:inline-block;
+}
+#rd{
+	width:20px;
+	height:20px;
+}
+
+.mt90 {
+    margin-top: 90px;
+}
+button.submit-btn {
+    color: #fff;
+}
+.ib {
+    display: inline-block;
+    zoom: 1;
+}
+.tc {
+    text-align: center;
+}
+button {
+    width: 280px;
+    height: 46px;
+    border: none;
+    font-size: 18px;
+    border-radius: 5px;
+    background: url(../images/register/button.png) no-repeat 50%;
+}
+button, input, select, textarea {
+    outline: none;
+}
+button {
+    cursor: pointer;
+}
+
+footer{
+	text-align:center;
+}
+/*验证码*/
+#rd{
+
+	border:1px solid red;
+	
+}
+
+.errorCode {
+    left: 28px;
+    top: 225px;
+}
+.errorCode {
+    color: red;
+    font-size: 14px;
+    white-space: nowrap;
+}

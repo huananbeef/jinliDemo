@@ -5,8 +5,7 @@ require.config({
 		"jquery":"jquery-1.11.3",
 		"jquery-cookie":"jquery.cookie",
 		"index":"index",
-		"tool":"tool",
-		"list":"list"
+		"tool":"tool"
 	},
 	//设置模块之间的依赖关系
 	shim:{
@@ -23,6 +22,3 @@ require(["index"],function(index){
 	index.main();
 })
 
-require(["list"],function(list){
-	list.list();
-})

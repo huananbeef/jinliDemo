@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>欢迎进入amigo的轻松世界</title>
+		<link rel="stylesheet" href="css/register.min.css">
+	</head>
+	<body>
+		<div id="outer">
+			<div id="middle">
+				<div id="inner" class="holder bc pr">
+					<div class="control pa" >
+						<div class="top frag pa">
+						</div>
+						<div class="bottom frag pa">
+						</div>
+						<div class="content">
+							<header class="tc pt1 pr">
+								<h1 class="ib mt30">
+									<p class="errorCode pa transition" ng-show="infor.errorCode" style="">
+									  <span ng-bind="infor.errorCode" class="ng-binding" style="display:none">请输入手机号</span>
+									</p>
+								</h1>
+									<p class="change w tr mt20 none transition ib">
+									  <span class="vt fl ml40 ng-binding">注册</span>
+									  <a class="mr40 vt tr ib pr30 ng-binding" href="javascript:">登录</a>
+									</p>
+									<ul class="mt5 tc w none transition ib">
+									  <li class="vm ib point transition selected"></li>
+									  <li class="vm ib line transition"></li>
+									  <li class="vm ib point transition"></li>
+									  <li class="vm ib line transition"></li>
+									  <li class="vm ib point transition"></li>
+									</ul>
+								</header>
+							<section class="pageFrame pr ng-scope" ng-view="ng-view">
+								<form class="form accountForm bc pa w t0 ng-pristine ng-scope ng-invalid ng-invalid-required ng-valid-pattern ng-valid-minlength ng-valid-maxlength" onsubmit="return false" name="accountForm" novalidate="novalidate">
+									<p class="tc">
+										<input type="tel" autofocus="autofocus" class="phone-input vm add-selected transition-border sel-country ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required ng-valid-pattern" id="phoneNum" ng-class="{'country-rear':infor.selCountry}" name="phoneNum" placeholder="请输入手机号" ng-model="infor.phoneNum" ng-required="true" ng-pattern="/^1(3|4|5|7|8)[0-9]\d{8}$/" required="required">
+									</p>
+									<p class="mt30 tc">
+										<input type="text" id="validCode" name="validCode" placeholder="请输入验证码" class="vm imgCode-input add-selected transition-border ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required ng-valid-pattern ng-valid-minlength ng-valid-maxlength" autocomplete="off" ng-model="infor.validCode" ng-required="true" ng-minlength="4" ng-maxlength="4" ng-pattern="/^\d+$/" required="required">
+										<a href="javascript:;" id="rd">1234</a> 
+										<a href="javascript:" class="vm exchange ml5 ng-binding">换一个</a>
+									</p>
+									<p class="tc mt90">
+										<button class="submit-btn ib tc ng-binding" ng-click="actions.nextPage()">下一步</button>
+									</p>
+								</form>
+							</section>
+						</div>
+					</div>
+				</div>
+			</div>
+			<footer class="pa w">
+				<address class="tc ng-binding" ng-bind="i18n.Gionee">金立通信设备有限公司版权所有 © 2006-2017</address>
+			</footer>
+		</div>
+		
+	</body>
+</html>

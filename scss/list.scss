@@ -170,12 +170,7 @@ address, cite, dfn, em, var {
     height: 470px;
     overflow: hidden;
 }
-.mob_pro .ui_pimg {
-    display: block;
-    width: 210px;
-    height: 350px;
-    position: relative;
-}
+
 .mob_pro .ui_pimg {
     display: block;
     width: 200px;
@@ -190,9 +185,27 @@ address, cite, dfn, em, var {
     height: 300px;
     margin-left: -40px;
 }
+
+.mob_pro .ui_pimg {
+    display: block;
+    width: 210px;
+    height: 350px;
+    position: relative;
+}
+.mob_listCon ul {
+    background: #fff;
+    width: 108%;
+    margin-bottom: 15px;
+}
+
 .ui_pimg img {
     vertical-align: top;
 }
+.mob_pro .ui_pname {
+    height: 36px;
+    margin-bottom: 6px;
+}
+
 .mob_pro .ui_pname {
     font-size: 14px;
     color: #000;
@@ -201,11 +214,9 @@ address, cite, dfn, em, var {
     overflow: hidden;
     font-weight: bold;
     margin-bottom: 0;
+	
 }
-.mob_pro .ui_pname {
-    height: 36px;
-    margin-bottom: 6px;
-}
+
 .ui_pname {
     line-height: 18px;
     overflow: hidden;
@@ -226,24 +237,15 @@ a:link, a:visited {
 .mob_pro .ui_pslogan {
     color: #EF4222;
 }
-.mob_pro .mask {
-    width: 100%;
-    background: rgba(239,66,34,.9);
-    bottom: 0;
-    height: 111px;
-}
-.mob_pro .mask {
-    position: absolute;
-    width: 228px;
-    height: 60px;
-    overflow: hidden;
-    left: 0;
-    bottom: 100px;
-    display: none;
-    -ms-filter: progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr='#ef4222', endColorstr='#ef4222');
-    filter: progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr='#ef4222', endColorstr='#ef4222')\8;
-}
 
+
+
+.mob_pro .charator {
+    line-height: 28px;
+    height: 28px;
+    overflow: hidden;
+    text-align: center;
+}
 .mob_pro .charator {
     font-size: 14px;
     font-family: "Microsoft Yahei";
@@ -251,12 +253,7 @@ a:link, a:visited {
     line-height: 48px;
     height: 48px;
 }
-.mob_pro .charator {
-    line-height: 28px;
-    height: 28px;
-    overflow: hidden;
-    text-align: center;
-}
+
 .mob_pro a.view {
     display: block;
     width: 112px;
@@ -290,4 +287,61 @@ a:link, a:visited {
 }
 address, cite, dfn, em, var {
     font-style: normal;
+}
+
+
+.mob_pro .mask {
+    position: absolute;
+    width: 228px;
+    height: 60px;
+    overflow: hidden;
+    left: 0;
+    bottom: 100px;
+    display: none;
+    -ms-filter: progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr='#ef4222', endColorstr='#ef4222');
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr='#ef4222', endColorstr='#ef4222')\8;
+}
+.mob_pro .mask {
+    width: 100%;
+    background: rgba(239,66,34,.9);
+    bottom: 0;
+    height: 111px;
+}
+
+/*列表分页栏*/
+.list_page {
+    background: #fff;
+}
+.ui_page {
+    line-height: 26px;
+    margin-bottom: 15px;
+    font-size: 12px;
+    text-align: center;
+    vertical-align: middle;
+    padding: 20px 0;
+}
+.ui_page span {
+    height: 28px;
+    margin: 0 5px 0 8px;
+}
+.ui_page a, .ui_page span {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 3px;
+    text-align: center;
+    white-space: nowrap;
+}
+.ui_page a {
+    height: 26px;
+    min-width: 14px;
+    padding: 0 6px;
+    border: solid 1px #ddd;
+    _width: 14px;
+}
+.ui_page a, .ui_page span {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 3px;
+    text-align: center;
+    white-space: nowrap;
 }

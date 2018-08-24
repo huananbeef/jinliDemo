@@ -7,10 +7,13 @@ define(["jquery","jquery-cookie"],function($){
 			$.ajax({
 				url:"data/data3.json",
 				success:function(arr){
+				
+					
+					
 					
 					for(var i = 0;i < arr.length;i++){
-						alert("1")
-						/* if(arr[i].price2){
+						
+						if(arr[i].price2){
 							$(`<li class="mob_pro  ">
 								<a href="javascript:;" class="ui_pimg" target="_blank">
 								<img src="${arr[i].img}" alt="${arr[i].name}" width="300" height="300">
@@ -18,32 +21,46 @@ define(["jquery","jquery-cookie"],function($){
 								<p class="ui_pname">
 								<a href="javascript:;" target="_blank">${arr[i].name}<span class="ui_pslogan">${arr[i].detail}</span></a>
 								</p>
-								<div class="mask" style="display: none;">
+								<div class="mask" >
 								<p class="charator">${arr[i].detail}</p>
 								<a href="javascript:;" target="_blank" class="view">查看详情</a>
 								</div>
 								<p class="ui_price"><span class="ui_pprice"><em>¥</em><span>${arr[i].price1}</span></span><span class="ui_pprice_m"><em>¥</em><del>${arr[i].price2}</del></span></p>
 								</li>`).appendTo($('#JmobileList'));
-						}else{ */
-							$(`<li class="mob_pro  ">
+						}else{ 
+							$(`<li class="mob_pro">
 								<a href="javascript:;" class="ui_pimg" target="_blank">
 								<img src="${arr[i].img}" alt="${arr[i].name}" width="300" height="300">
 								</a>
 								<p class="ui_pname">
 								<a href="javascript:;" target="_blank">${arr[i].name}<span class="ui_pslogan">${arr[i].detail}</span></a>
 								</p>
-								<div class="mask" style="display: none;">
+								<div class="mask" >
 								<p class="charator">${arr[i].detail}</p>
 								<a href="javascript:;" target="_blank" class="view">查看详情</a>
 								</div>
 								<p class="ui_price"><span class="ui_pprice"><em>¥</em><span>${arr[i].price1}</span></span></p>
 								</li>`).appendTo($('#JmobileList'));
-						/* } */
+						} 
 						
 					
 					}
 				}
 			})
+			
+			$('#JmobileList').on('mouseover','li',function(){
+				$(this).find('div').stop().slideDown(500);
+				
+			})
+			
+			$('#JmobileList').on('mouseout','li',function(event){
+				$(this).find('div').stop().slideUp(500);
+				
+			})
+			
+		
+		
+			
 	/* 结尾 */
 		}
 	)}

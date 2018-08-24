@@ -1,145 +1,171 @@
-function getStyle(obj,attr){
-	return obj.currentStyle ? obj.currentStyle[attr] : getComputedStyle(obj,1)[attr];
-}
-//回调函数 ： 将一个函数作为另一个函数的参数时。
-function sport(obj,json,fn){
-	clearInterval(obj.timer);
-	obj.timer = setInterval(function(){
-		var stop = true;
-		for(var attr in json){
-			var cur = attr == 'opacity' ? parseInt(parseFloat(getStyle(obj,attr)) * 100) : parseInt(getStyle(obj,attr));
-			var speed = (json[attr] - cur) / 8; //基数
-			speed = speed > 0 ? Math.ceil(speed) : Math.floor(speed);
-			if(cur != json[attr]){
-				stop = false;
-			}
-			if(attr == 'opacity'){
-				obj.style.opacity = (cur + speed) / 100;
-				obj.style.filter = 'alpha(opacity=' + (cur + speed) + ')';
+	/*分页*/
+			$().ready(function(){
+	
+	var curPage =$(".ui_page_curr").val();
+	var last =$("#totalPage").val();
+	var page =Math.ceil(curPage/10);
+	//调用绘制分页样式函数
+	draw(page,curPage);
+	
+	//绑定点击页码事件
+	$(document).on("click",".pagination li a",function(){
+		var str =$(this).html();
+		if(!isNaN(str)){
+			//移除之前的active
+			$(".pagination li a").removeClass("active");
+			$(this).attr("class","active");
+			$("#currentPage").val(str);
+		}
+	});
+	
+	//绑定下一页点击事件
+	$(document).on("click","#nextPage",function(){
+		var num =$(".active").html();
+		var curPage =$("#currentPage").val();
+		var last =$("#totalPage").val();
+		var page =Math.ceil((parseInt(num))/10);
+		if(num < page*10 && num != last){
+			//移除之前的active
+			$(".pagination li a").removeClass("active");
+			$("#"+(parseInt(num)+1)+"").attr("class","active");
+			//$(".pagination li a[text="+(parseInt(num)+1)+"]").attr("class","active");//jQ1.6支持
+			$("#currentPage").val(parseInt(num)+1);
+		}else if(num == page*10 && num != last){
+			//清空之前的数据
+			$(".pagination").html("");
+			draw(page+1,(parseInt(num)+1));
+		}
+	})
+	
+	//绑定上一页点击事件
+	$(document).on("click","#previousPage",function(){
+		var num =$(".active").html();
+		var curPage =$("#currentPage").val();
+		var last =$("#totalPage").val();
+		var page =Math.ceil((parseInt(num))/10);
+		if(num <= page*10 && num != (page-1)*10+1){
+			//移除之前的active
+			$(".pagination li a").removeClass("active");
+			$("#"+(parseInt(num)-1)+"").attr("class","active");
+			//$(".pagination li a[text="+(parseInt(num)+1)+"]").attr("class","active");//jQ1.6支持
+			$("#currentPage").val(parseInt(num)-1);
+		}else if(num == (page-1)*10+1 && num != 1){
+			//清空之前的数据
+			$(".pagination").html("");
+			draw(page-1,(parseInt(num)-1));
+		}
+	})
+	
+	//绘制页面分页样式
+	function draw(page,curPage){
+		//页面中的当前页
+		var page =page;
+		//后台传过来的页数
+		var curPage = curPage;
+		//后台传过来的总页数
+		var datas =$("#totalPage").val();
+		//每页显示多少条数据
+		var pageSize =10;
+		//在网页中一共要分多少页
+		var totalPage = Math.floor((datas-1)/pageSize+1);
+		
+		var liStr ="<li><a id='previousPage' href='#'>«</a></li>";
+		$("#currentPage").val(curPage);
+		if(page <= totalPage){
+			if(datas <= 10){
+				for(i=1; i<=datas; i++){
+					//为当前页增加样式
+					var active ="";
+					if(i==curPage){
+						active=" class='active' ";
+					}
+					liStr +=" <li><a id="+i+" "+active+" href='#'>"+i+"</a></li>"
+				}
 			}else{
-				obj.style[attr] = cur + speed + 'px';
+				var start =pageSize*(page-1)+1;
+				var end =page*pageSize;
+				if(page == totalPage){
+					for(i=start; i<=datas; i++){
+						//为当前页增加样式
+						var active ="";
+						if(i==curPage){
+							active=" class='active' ";
+						}
+						liStr +=" <li><a id="+i+" "+active+" href='#'>"+i+"</a></li>"
+					}
+				}else{
+					for(i=start; i<=end; i++){
+						//为当前页增加样式
+						var active ="";
+						if(i==curPage){
+							active=" class='active' ";
+						}
+						liStr +=" <li><a id="+i+" "+active+" href='#'>"+i+"</a></li>"
+					}
+				}
 			}
 		}
-		if(stop){
-			clearInterval(obj.timer);
-			if(typeof fn === 'function'){
-				fn();
-			}
-		}
-	},30)
-}
-function Slider(){
-	let oBigBox = document.querySelector('#box');
-	//				//获取上半部
-					//获取左遮罩
-					let oLeftMark = document.querySelector('#left');
-					//获取右遮罩
-					let oRightMark = document.querySelector('#right');
-					//获取左按钮
-					let oLeftBtn = document.querySelector('#btn_l');
-					//获取右按钮
-					let oRightBtn = document.querySelector('#btn_r');
-					//获取所有的大图
-					let oBigPics = document.querySelectorAll('#top li');
-	//				//获取底部
-	//				let oBottom = document.querySelector('#bottom');
-					//获取小图ul
-					let oSmallUl = document.querySelector('#small_ul');
-					//获取所有的小图
-					let oSmallPic = document.querySelectorAll('#bottom li');
-					//2.设置小图UL的总宽度
-					oSmallUl.style.width = oSmallPic[0].offsetWidth * oSmallPic.length + 'px';
-					//3.给左遮罩和左按钮同时添加移入事件，使左按钮显示			
-					oLeftMark.onmouseover = oLeftBtn.onmouseover = function(){
-						sport(oLeftBtn,{opacity : 100});
-					}
-					//4.给左遮罩和左按钮同时添加移出事件，使左按钮隐藏
-					oLeftMark.onmouseout = oLeftBtn.onmouseout =  function(){
-						sport(oLeftBtn,{opacity:0});
-					}
-					//5.给右遮罩和右按钮同时添加移入事件，使右按钮显示	
-					oRightMark.onmouseenter = oRightBtn.onmouseenter = function(){
-						sport(oRightBtn,{opacity : 100});
-					}
-					//6.给右遮罩和右按钮同时添加移出事件，使右按钮隐藏
-					oRightMark.onmouseleave = oRightBtn.onmouseleave = function(){
-						sport(oRightBtn,{opacity : 0});
-					}
-					//定义一个控制图片轮播的下标
-					let indexA = 0;
-					//定义一个改变z-index的变量
-					let zIndex = 1;
-					//记录计时器
-					let timer = null;
-					slider();
-					autoPlay();
-					//7.给左右按钮添加点击事件
-					oLeftBtn.onclick = function(){
-						indexA --;
-						if(indexA == -1){
-							indexA = oBigPics.length - 1;
-						}
-						slider();
-					}
-					oRightBtn.onclick = function(){
-						indexA ++;
-						if(indexA == oBigPics.length){
-							indexA = 0;
-						}
-						slider();
-					}
-					//8.给小图添加事件
-					for(let i = 0,len = oSmallPic.length;i < len;i ++){
-						//移入时，透明度100%
-						oSmallPic[i].onmouseenter = function(){
-							sport(this,{opacity : 100});
-						}
-						//移出时，透明度50%
-						oSmallPic[i].onmouseleave = function(){
-							if(indexA != i){
-								sport(this,{opacity:50});
-							}
-						}
-						//点击时，轮播到当前点击的图片
-						oSmallPic[i].onclick = function(){
-							indexA = i;
-							slider();
-						}
-					}
-					//9.设置轮播
-					function slider(){
-						//大图轮播
-						oBigPics[indexA].style.zIndex = ++ zIndex;
-						//小图轮播
-						if(indexA == 0){
-							sport(oSmallUl,{left : 0});
-						}else if(indexA == oSmallPic.length - 1){
-							sport(oSmallUl,{left : -(oSmallPic.length - 3) * oSmallPic[0].offsetWidth});
-						}else{
-							sport(oSmallUl,{left : -(indexA - 1) * oSmallPic[0].offsetWidth});
-						}
-						//初始化所有小图的透明度
-						for(let i = 0,len = oSmallPic.length;i < len;i ++){
-							sport(oSmallPic[i],{opacity:50});
-						}
-						sport(oSmallPic[indexA],{opacity:100});
-					}
-					//自动轮播
-					function autoPlay(){
-						timer = setInterval(function(){
-							indexA ++;
-							if(indexA == oBigPics.length){
-								indexA = 0;
-							}
-							slider();
-						},3000)
-					}
-					//给大盒子添加移入移出事件
-					oBigBox.onmouseenter = function(){
-						clearInterval(timer);
-					}
-					oBigBox.onmouseleave = function(){
-						autoPlay();
-					}
-}
+		liStr +="<li><a id='nextPage' href='#'>»</a></li>";
+		$(".pagination").append(liStr);
+	}
+})
 
+	/*分页部分*/
+					var totalPage = Math.ceil(arr.length / 12);
+					var curPage =$(".ui_page_curr").html();
+					
+					
+					//调用绘制分页样式函数
+					draw(page,curPage);
+					//绑定点击页码
+					$(document).on('click','#pager a',function(){
+						var str = $(this).html();
+						if(!isNaN(str)){
+							var content1 = $('.ui_page_curr').html();
+							var new1 = $("<a href=''>" + content1 + '</a>');
+							new1.after$('.ui_page_curr');
+							$('.ui_page_curr').remove();
+							
+							
+							var content2 = $(this).html();
+							var new2 = $("<span class='ui_page_curr'>" + content2 + '</span>');
+							new2.after($(this));
+							$(this).remove();
+						}
+					})
+					//绑定下一页点击事件
+					$(document).on("click",".ui_page_next",function(){
+						var num = $('.ui_page_curr').html();
+						var page = Math.ceil((parseInt(num)) / 12);
+						if(num < page * 12 && num !='末页'){
+							//移除之前的.ui_page_curr
+							var content1 = $('.ui_page_curr').html();
+							var new1 = $("<a href=''>" + content + '</a>');
+							new1.after$('.ui_page_curr');
+							$('.ui_page_curr').remove();
+							
+							var content2 = num + 1;
+							var new2 = $("<span class=''>" + content2 + '</span>');
+							new2.after($(this));
+							$(this).remove();
+							
+						}
+						
+					})
+					//绘制页面分页样式
+					function draw(page,curPage){
+						//页面中的当前页
+						 var page = page;
+						 //后台传过来的页数
+						 var curPage = curPage
+						 //后台传过来的总页数
+						 var datas = Math.ceil(arr.length);
+						 //每页显示多少数据
+						 var pageSize = 12;
+						 //网页中一共要分多少页
+						 var totalPage = Math.ceil(arr.length / 12);
+						 var listr = "<a class='ui_page_first' href="">首页</a><a 'class=ui_page_prev' href="">上一页</a>";
+						 if(page <= totalPage)
+						 
+					}
+					
