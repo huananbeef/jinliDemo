@@ -106,9 +106,11 @@
 				</div>
 				<ul>
 					<!--标注跳转部分-->
-					<li class="cen active"><a href="index.html">亮点</a></li>
-					<li><a href="params.html">参数</a></li>
-					<li><a href="gallery.html">图库</a></li>
+					<li class="cen active">
+						<a href="javascript:;">亮点</a></li>
+					<li>
+						<a href="javascript:;">参数</a></li>
+					<li><a href="javascript:;">图库</a></li>
 				</ul>
 				<form id="buy_form" action="#">
 				<div class="pop">
@@ -121,16 +123,24 @@
 						<input type="hidden" value="1" name="number" id="hdnNum">
 						<img src="images/goods/closeFix.png" alt="金立" class="closeBuy">
 						<div class="selected">
-						<img src="images/goods/5.jpg" alt="金立" id="selectedImg">
+							<div class="orig">
+								<img src="images/goods/5.jpg" alt="金立" id="selectedImg">
+								<div class="blocks">
+									
+								</div>
+							</div>
+							<div class="fd">
+								<img src="images/goods/5.jpg" alt="金立" id="selectedImg">
+							</div>
 							<div class="selectedRight">
 								<h3 class="wellcomeH">欢迎购买金立M7手机</h3>
 								<p class="wellcomeP">M7</p>
 								<h3 class="selectColorH">颜色选择</h3>
 									<div class="selectColorDiv">
-										<p class="selectedPhone selectCan fyh" id="2679"><span></span>枫叶红</p>
-										<p class="selectNo xbj" id="2683"><span></span>香槟金</p>
-										<p class="selectCan xyh" id="2685"><span></span>炫影黑</p>
-										<p class="selectNo xyl" id="2681"><span></span>星耀蓝</p>
+										<p class="selectedPhone selectCan fyh" price="2699" pic="5"><span></span>枫叶红</p>
+										<p class="selectNo xbj" price="2683"><span></span>香槟金</p>
+										<p class="selectCan xyh" price="2499" pic="9"><span></span>炫影黑</p>
+										<p class="selectNo xyl" price="2681"><span></span>星耀蓝</p>
 									</div>
 									<h3 class="copy-h3">版本选择</h3>
 									<div class="selectCopy">
@@ -152,7 +162,9 @@
 											</div>
 										</div>
 									</div>
-									<a class="buyNow" href="javascript:;" id="buyBtn" target="_blank">立 即 购 买</a>
+									<a class="buyNow" href="javascript:;" id="buyBtn" target="_blank">
+										立 即 购 买
+									</a>
 							</div>
 						</div>
 					</div>
@@ -160,7 +172,10 @@
 			</form>
 			</div>
 		</div>
-		<!-- 商品详情01 -->
+		
+		<div class="navlist nav0" id="navlist0">
+		
+		
 		<div class="section section1 animated"></div>
 		<div class="section section2"></div>
 		<div class="section section3 animated">
@@ -187,7 +202,7 @@
 				</div>
 			</div>
 		</div>
-		<!-- 隐藏安全系统01-->
+		<!-- 隐藏安全系统 -->
 		<ul id="list1" class="list1" style="display: none;">
 			<li>
 				<div class="swiper-container swiper-container1 swiper-container-horizontal swiper-container-fade">
@@ -365,52 +380,55 @@
 		</div>
 		<!-- 隐藏03 -->
 		<ul id="list3" class="list3" style="display: none;">
-		<li>
-		<div class="section section-list3-item1 animated">
-		<div class="intro auto">
-		<div class="intro-con">
-		<p class="intro-p0">格调 尽情演绎</p>
-		<p class="intro-p2 auto">重要的不是追逐焦点，而是成为焦点。融合光影的M7，曲直有度，大美无言，你内心所向之处，它已然抵达。接下来，就是格调与典雅的尽情演绎。</p>
-		</div>
-		</div>
-		</div>
-		</li>
-		<li>
-		<div class="section section-list3-item2 animated">
-		<div class="intro auto">
-		<p class="intro-p0">薄至7.2mm</p>
-		<p class="intro-p2 auto">得益于金立多年研发超级续航的积累，即使M7配备了4000mAh大电池，但机身厚度仅有7.2mm，比市面很多配备3000mAh电池的手机还要薄。M7握在手里，你会感受到难以置信舒适。</p>
-		</div>
-		</div>
-		</li>
-		<li>
-		<div class="swiper-container swiper-container3">
-		<div class="swiper-wrapper">
-		<div class="swiper-slide">
-		<div class="section-list3-item section-list3-item11">
-		<div class="intro auto">
-		<p class="intro-p0">背部金属太阳纹 </p>
-		<p class="intro-p1">光影流动之美</p>
-		<p class="intro-p2 auto">M7机身背部金属太阳纹理，采用微米级锻造工艺，多道工艺精雕细琢，成就耀眼光泽。宛如时间的年轮随着光影的流动，闪耀生命的光彩，大气之感不言而喻。</p>
-		</div>
-		</div>
-		</div>
-		<div class="swiper-slide">
-		<div class="section-list3-item section-list3-item12">
-		<div class="intro auto">
-		<p class="intro-p0">正面大猩猩玻璃金属镀膜</p>
-		<p class="intro-p2">M7正面玻璃盖板采用三层金属镀膜，光线照射到盖板表面时，玻璃表面闪耀出宝石般的光泽，瞬间捕获眼球。</p>
-		</div>
-		</div>
-		</div>
-		</div>
-		<div class="intro auto">
-		<div class="swiper-pagination"></div>
-		<div class="swiper-button-next"></div>
-		<div class="swiper-button-prev"></div>
-		</div>
-		</div>
-		</li>
+			<li>
+				<div class="section section-list3-item1 animated">
+					<div class="intro auto">
+						<div class="intro-con">
+							<p class="intro-p0">格调 尽情演绎</p>
+							<p class="intro-p2 auto">重要的不是追逐焦点，而是成为焦点。融合光影的M7，曲直有度，大美无言，你内心所向之处，它已然抵达。接下来，就是格调与典雅的尽情演绎。</p>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="section section-list3-item2 animated">
+					<div class="intro auto">
+						<p class="intro-p0">薄至7.2mm</p>
+						<p class="intro-p2 auto">得益于金立多年研发超级续航的积累，即使M7配备了4000mAh大电池，但机身厚度仅有7.2mm，比市面很多配备3000mAh电池的手机还要薄。M7握在手里，你会感受到难以置信舒适。</p>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="swiper-container swiper-container3">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide swiper-slide-active">
+							<div class="section-list3-item section-list3-item11 ">
+								<div class="intro auto">
+									<p class="intro-p0">背部金属太阳纹 </p>
+									<p class="intro-p1">光影流动之美</p>
+									<p class="intro-p2 auto">M7机身背部金属太阳纹理，采用微米级锻造工艺，多道工艺精雕细琢，成就耀眼光泽。宛如时间的年轮随着光影的流动，闪耀生命的光彩，大气之感不言而喻。</p>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="section-list3-item section-list3-item12">
+								<div class="intro auto">
+									<p class="intro-p0">正面大猩猩玻璃金属镀膜</p>
+									<p class="intro-p2">M7正面玻璃盖板采用三层金属镀膜，光线照射到盖板表面时，玻璃表面闪耀出宝石般的光泽，瞬间捕获眼球。</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="intro auto">
+						<div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets">
+							<span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span>
+							<span class="swiper-pagination-bullet "></span>
+						</div>
+						<div class="swiper-button-next"></div>
+						<div class="swiper-button-prev"></div>
+					</div>
+				</div>
+			</li>
 		</ul>
 		<!-- 详情7 -->
 		<div class="section section7 animated">
@@ -457,63 +475,63 @@
 		<ul id="list4" class="list4" style="display: none;">
 			<li>
 			<div class="section section-list4-item1 animated">
-			<div class="intro auto">
-			<div class="intro-con">
-			<p class="intro-p0">硬件级实时背景虚化</p>
-			<p class="intro-p1">拍照更美</p>
-			<p class="intro-p2 auto">M7后置双摄像头设计，辅以先进的双摄算法，拍自己、拍别人，随手一拍就能拍出媲美专业单反的背景虚化效果。</p>
-			</div>
-			</div>
+				<div class="intro auto">
+					<div class="intro-con">
+						<p class="intro-p0">硬件级实时背景虚化</p>
+						<p class="intro-p1">拍照更美</p>
+						<p class="intro-p2 auto">M7后置双摄像头设计，辅以先进的双摄算法，拍自己、拍别人，随手一拍就能拍出媲美专业单反的背景虚化效果。</p>
+					</div>
+				</div>
 			</div>
 			</li>
 			<li>
-			<div class="section section-list4-item2 animated">
-			<div class="intro auto">
-			<p class="intro-p0">3D拍照</p>
-			<p class="intro-p1">让照片酷起来</p>
-			<p class="intro-p2 auto">3D动态拍摄模式，通过多个维度拍摄并形成立体化影像，转动手机或者滑动屏幕，原来静止的照片就会动起来，另外3D照片不仅可以自己欣赏，还可以分享到朋友或设置为锁屏壁纸供朋友羡慕。来，快用3D拍照耍个酷！</p>
-			</div>
-			</div>
+				<div class="section section-list4-item2 animated">
+					<div class="intro auto">
+						<p class="intro-p0">3D拍照</p>
+						<p class="intro-p1">让照片酷起来</p>
+						<p class="intro-p2 auto">3D动态拍摄模式，通过多个维度拍摄并形成立体化影像，转动手机或者滑动屏幕，原来静止的照片就会动起来，另外3D照片不仅可以自己欣赏，还可以分享到朋友或设置为锁屏壁纸供朋友羡慕。来，快用3D拍照耍个酷！</p>
+					</div>
+				</div>
 			</li>
 			<li class="lbt">
 			<div class="swiper-container swiper-container4">
 			<div class="swiper-wrapper">
-			<div class="swiper-slide">
-			<div class="lbt-content section animated">
-			<div class="lbt-text">
-			<div class="intro-p0">HDR拍照引擎2.0</div>
-			<div class="intro-p2">逆光环境拍照，要么暗处暗掉，要么亮处曝掉。M7 HDR拍照引擎2.0智能优化暗部和亮部，使成片暗处明亮，亮处细节丰富。相比HDR拍照引擎1.0，在成像速度和成片质量都有比较大的提升。</div>
-			</div>
-			<img src="images/goods/camera4.jpg" alt="">
-			</div>
-			</div>
-			<div class="swiper-slide">
-			<div class="lbt-content">
-			<div class="lbt-text">
-			<div class="intro-p0">多帧降噪2.0</div>
-			<div class="intro-p2">弱光环境拍照，单纯的提高感光度，成像较差，照片上往往布满噪点。M7多帧降噪2.0，弱光环境下拍照，默认连续拍摄最多六张底片并合成一张细腻清晰照片， 抑制噪点产生。</div>
-			</div>
-			<img src="images/goods/camera3.jpg" alt="">
-			</div>
-			</div>
-			<div class="swiper-slide">
-			<div class="lbt-content">
-			<div class="lbt-text">
-			<div class="intro-p0">智能拍照模式</div>
-			<div class="intro-p2">M7支持普通、夜景、HDR场景自动识别，只需打开相机，随手一拍就能得到非常出色的照片。减少切换操作的复杂程度，普通模式覆盖场景更多，更加智能化。</div>
-			</div>
-			<img src="images/goods/camera2.jpg" alt="">
-			</div>
-			</div>
-			<div class="swiper-slide">
-			<div class="lbt-content">
-			<div class="lbt-text">
-			<div class="intro-p0">PDAF相位对焦</div>
-			<div class="intro-p2">每时每刻，心动时刻稍纵即逝。M7配备了PDAF相位对焦系统，无论白天，还是黑夜，美好画面都能快速清晰捕捉。</div>
-			</div>
-			<img src="images/goods/camera1.jpg" alt="">
-			</div>
-			</div>
+				<div class="swiper-slide swiper-slide-active">
+					<div class="lbt-content section animated">
+						<div class="lbt-text">
+						<div class="intro-p0">HDR拍照引擎2.0</div>
+						<div class="intro-p2">逆光环境拍照，要么暗处暗掉，要么亮处曝掉。M7 HDR拍照引擎2.0智能优化暗部和亮部，使成片暗处明亮，亮处细节丰富。相比HDR拍照引擎1.0，在成像速度和成片质量都有比较大的提升。</div>
+						</div>
+					<img src="images/goods/camera4.jpg" alt="">
+					</div>
+				</div>
+				<div class="swiper-slide">
+					<div class="lbt-content">
+						<div class="lbt-text">
+							<div class="intro-p0">多帧降噪2.0</div>
+							<div class="intro-p2">弱光环境拍照，单纯的提高感光度，成像较差，照片上往往布满噪点。M7多帧降噪2.0，弱光环境下拍照，默认连续拍摄最多六张底片并合成一张细腻清晰照片， 抑制噪点产生。</div>
+						</div>
+						<img src="images/goods/camera3.jpg" alt="">
+					</div>
+				</div>
+				<div class="swiper-slide">
+					<div class="lbt-content">
+						<div class="lbt-text">
+							<div class="intro-p0">智能拍照模式</div>
+							<div class="intro-p2">M7支持普通、夜景、HDR场景自动识别，只需打开相机，随手一拍就能得到非常出色的照片。减少切换操作的复杂程度，普通模式覆盖场景更多，更加智能化。</div>
+						</div>
+						<img src="images/goods/camera2.jpg" alt="">
+					</div>
+				</div>
+				<div class="swiper-slide">
+					<div class="lbt-content">
+						<div class="lbt-text">
+							<div class="intro-p0">PDAF相位对焦</div>
+							<div class="intro-p2">每时每刻，心动时刻稍纵即逝。M7配备了PDAF相位对焦系统，无论白天，还是黑夜，美好画面都能快速清晰捕捉。</div>
+						</div>
+						<img src="images/goods/camera1.jpg" alt="">
+					</div>
+				</div>
 			</div>
 			<div class="swiper-button-next"></div>
 			<div class="swiper-button-prev"></div>
@@ -547,83 +565,390 @@
 			<li>
 			<div class="swiper-container swiper-container5">
 			<div class="swiper-wrapper">
-			<div class="swiper-slide">
-			<div class="section-list5-item section-list5-item11">
+				<div class="swiper-slide swiper-slide-active">
+					<div class="section-list5-item section-list5-item11">
+						<div class="intro auto">
+						<p class="intro-p0">特色功能</p>
+						<p class="intro-p1">应用分身</p>
+						<p class="intro-p2">M7支持同时运行三个微信、三个QQ等应用，满足一部手机登录多个账号的需求。</p>
+						</div>
+					</div>
+				</div>
+				<div class="swiper-slide ">
+					<div class="section-list5-item section-list5-item12">
+						<div class="intro auto">
+							<p class="intro-p0">特色功能</p>
+							<p class="intro-p1">指纹快捷</p>
+							<p class="intro-p2">指纹启动快付、语音、录音机、微信、手电筒、拍照功能，用户可根据需要设定相应指纹来调出相应应用。</p>
+						</div>
+					</div>
+				</div>
+				<div class="swiper-slide">
+					<div class="section-list5-item section-list5-item13">
+						<div class="intro auto">
+							<p class="intro-p0">特色功能</p>
+							<p class="intro-p1">智能语音</p>
+							<p class="intro-p2">搭载新版智能语音系统，可通过人机交互进行功能操作和查询，具有语音转写，智能提醒等功能。</p>
+						</div>
+					</div>
+				</div>
+			</div>
 			<div class="intro auto">
-			<p class="intro-p0">特色功能</p>
-			<p class="intro-p1">应用分身</p>
-			<p class="intro-p2">M7支持同时运行三个微信、三个QQ等应用，满足一部手机登录多个账号的需求。</p>
-			</div>
-			</div>
-			</div>
-			<div class="swiper-slide">
-			<div class="section-list5-item section-list5-item12">
-			<div class="intro auto">
-			<p class="intro-p0">特色功能</p>
-			<p class="intro-p1">指纹快捷</p>
-			<p class="intro-p2">指纹启动快付、语音、录音机、微信、手电筒、拍照功能，用户可根据需要设定相应指纹来调出相应应用。</p>
-			</div>
-			</div>
-			</div>
-			<div class="swiper-slide">
-			<div class="section-list5-item section-list5-item13">
-			<div class="intro auto">
-			<p class="intro-p0">特色功能</p>
-			<p class="intro-p1">智能语音</p>
-			<p class="intro-p2">搭载新版智能语音系统，可通过人机交互进行功能操作和查询，具有语音转写，智能提醒等功能。</p>
-			</div>
-			</div>
-			</div>
-			</div>
-			<div class="intro auto">
-			<div class="swiper-pagination"></div>
-			<div class="swiper-button-next"></div>
-			<div class="swiper-button-prev"></div>
+				<div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets">
+					<span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span>
+					<span class="swiper-pagination-bullet "></span>
+					<span class="swiper-pagination-bullet"></span></div>
+				<div class="swiper-button-next"></div>
+				<div class="swiper-button-prev"></div>
 			</div>
 			</div>
 			</li>
 			</ul>
 			<!-- 轮播部分 -->
 			<div class="swiper-container swiper-container0 swiper-container-horizontal swiper-container-fade">
-			<div class="swiper-wrapper" style="transition-duration: 0ms;"><div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="4" style="width: 1263px; transform: translate3d(0px, 0px, 0px); opacity: 1; transition-duration: 0ms;">
-			<div class="list0-items list0-item5">
-			<div class="intro auto"></div>
-			</div>
-			</div>
-			<div class="swiper-slide" data-swiper-slide-index="0" style="width: 1263px; transform: translate3d(-1263px, 0px, 0px); opacity: 1; transition-duration: 0ms;">
-			<div class="list0-items list0-item1">
-			<div class="intro auto"></div>
-			</div>
-			</div>
-			<div class="swiper-slide swiper-slide-prev" data-swiper-slide-index="1" style="width: 1263px; transform: translate3d(-2526px, 0px, 0px); opacity: 1; transition-duration: 0ms;">
-			<div class="list0-items list0-item2">
-			<div class="intro auto"></div>
-			</div>
-			</div>
-			<div class="swiper-slide swiper-slide-active" data-swiper-slide-index="2" style="width: 1263px; transform: translate3d(-3789px, 0px, 0px); opacity: 1; transition-duration: 0ms;">
-			<div class="list0-items list0-item3">
-			<div class="intro auto"></div>
-			</div>
-			</div>
-			<div class="swiper-slide swiper-slide-next" data-swiper-slide-index="3" style="width: 1263px; transform: translate3d(-5052px, 0px, 0px); opacity: 0; transition-duration: 0ms;">
-			<div class="list0-items list0-item4">
-			<div class="intro auto"></div>
-			</div>
-			</div>
-			<div class="swiper-slide" data-swiper-slide-index="4" style="width: 1263px; transform: translate3d(-6315px, 0px, 0px); opacity: 0; transition-duration: 0ms;">
-			<div class="list0-items list0-item5">
-			<div class="intro auto"></div>
-			</div>
-			</div>
-			<div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="0" style="width: 1263px; transform: translate3d(-7578px, 0px, 0px); opacity: 0; transition-duration: 0ms;">
-			<div class="list0-items list0-item1">
-			<div class="intro auto"></div>
-			</div>
-			</div></div>
-			<div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets"><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span></div>
+				<div class="swiper-wrapper" style="transition-duration: 0ms;">
+					
+					<div class="swiper-slide swiper-slide-duplicate-active" data-swiper-slide-index="0" style="width: 1263px;">
+						<div class="list0-items list0-item1">
+							<div class="intro auto"></div>
+						</div>
+					</div>
+					<div class="swiper-slide" data-swiper-slide-index="1" style="width: 1263px;">
+						<div class="list0-items list0-item2">
+						<div class="intro auto"></div>
+						</div>
+					</div>
+					<div class="swiper-slide" data-swiper-slide-index="2" style="width: 1263px;">
+						<div class="list0-items list0-item3">
+							<div class="intro auto"></div>
+						</div>
+					</div>
+					<div class="swiper-slide" data-swiper-slide-index="3" style="width: 1263px;">
+						<div class="list0-items list0-item4">
+							<div class="intro auto"></div>
+						</div>
+					</div>
+					<div class="swiper-slide " data-swiper-slide-index="4" style="width: 1263px;">
+						<div class="list0-items list0-item5">
+							<div class="intro auto"></div>
+						</div>
+					</div>
+				</div>
+				<div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets">
+					<span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span>
+					<span class="swiper-pagination-bullet"></span>
+					<span class="swiper-pagination-bullet "></span>
+					<span class="swiper-pagination-bullet"></span>
+					<span class="swiper-pagination-bullet"></span>
+				</div>
 			</div>
 			<!-- 结尾部分 -->
-			<div class="section section12 animated"></div>
+			<div class="section section12 animated">
+				
+			</div>
+			
+			</div>
+		<!--导航栏2参数-->
+			<div class="navlist nav1" id="navlist1" style="display:none">
+				<div class="content">
+					<h1>详细参数</h1>
+					<div class="con">
+						<h5>基本信息</h5>
+						<div class="le">
+							<p>上市时间</p>
+							<p>操作系统版本</p>
+							<p>CPU</p>
+							<p>CPU频率</p>
+						</div>
+						<div class="ri">
+							<p>2017年10月</p>
+							<p>amigo5.0（基于android7.1）</p>
+							<p>Helio P30</p>
+							<p>最高2.5GHz</p>
+						</div>
+					</div>
+					<div class="con">
+						<h5>外观</h5>
+						<div class="le">
+							<p>颜色</p>
+							<p>外观尺寸</p>
+							<p>重量</p>
+							<p>机身材质</p>
+						</div>
+						<div class="ri">
+							<p>宝石蓝、星耀蓝、枫叶红、香槟金、炫影黑</p>
+							<p>157*76*7.2mm</p>
+							<p>180g</p>
+							<p>金属</p>
+						</div>
+					</div>
+					<div class="con">
+						<h5>拍照</h5>
+						<div class="le">
+							<p>后置摄像头</p>
+							<p>前置摄像头</p>
+							<p>闪光灯</p>
+							<p>变焦模式</p>
+							<p>自动对焦</p>
+						</div>
+						<div class="ri">
+							<p>1600W+800W</p>
+							<p>800W</p>
+							<p>LED补光灯</p>
+							<p>数码变焦</p>
+							<p>支持</p>
+						</div>
+					</div>
+					<div class="con">
+					<h5>摄像</h5>
+					<div class="le">
+					<p>视频拍摄</p>
+					</div>
+					<div class="ri">
+					<p>1080P/720P/480P/QCIF</p>
+					</div>
+					</div>
+					<div class="con">
+					<h5>屏幕</h5>
+					<div class="le">
+					<p>屏幕尺寸</p>
+					<p>分辨率</p>
+					<p>屏幕材质</p>
+					<p>屏幕色彩</p>
+					</div>
+					<div class="ri">
+					<p>6.01英寸</p>
+					<p>2160*1080</p>
+					<p>AMOLED</p>
+					<p>1600万色</p>
+					</div>
+					</div>
+					<div class="con">
+					<h5>网络参数</h5>
+					<div class="le">
+					<p>双卡机型类型</p>
+					<p>网络类型</p>
+					<p class="p3">网络频段</p>
+					<p>4G网络制式</p>
+					<p>3G网络制式</p>
+					<p>2G网络制式</p>
+					<p>SIM卡尺寸</p>
+					</div>
+					<div class="ri">
+					<p>双卡双待单通</p>
+					<p>双卡7模</p>
+					<ul>
+					<li>GSM B2/B3/B5/B8</li>
+					<li>TD_SCDMA B34/B39</li>
+					<li>TDD_LTE B34/B38/B39/B40/B41</li>
+					<li>WCDMA B1/B2/B5/B8</li>
+					<li>FDD-LTE B1/B3/B5/B7/B8</li>
+					<li>CDMA1X&amp;EVDO BC0</li>
+					</ul>
+					<p>移动、联通、电信</p>
+					<p>移动、联通、电信</p>
+					<p>移动、联通、电信</p>
+					<p>双Nano-SIM卡</p>
+					</div>
+					</div>
+					<div class="con">
+					<h5>存储</h5>
+					<div class="le">
+					<p>运行内存</p>
+					<p>机身内存</p>
+					<p>最大存储扩展</p>
+					<p>闪存属性(DDR)</p>
+					</div>
+					<div class="ri">
+					<p>6GB</p>
+					<p>64GB</p>
+					<p>256GB内存扩展</p>
+					<p>LPDDR4X</p>
+					</div>
+					</div>
+					<div class="con">
+					<h5>多媒体</h5>
+					<div class="le">
+					<p>音乐播放</p>
+					<p>视频播放</p>
+					<p>图片播放</p>
+					<p>Flash播放</p>
+					<p>收音机</p>
+					<p>录音机</p>
+					</div>
+					<div class="ri">
+					<p>支持</p>
+					<p>支持</p>
+					<p>支持</p>
+					<p>支持</p>
+					<p>支持</p>
+					<p>支持</p>
+					</div>
+					</div>
+					<div class="con">
+					<h5>电池</h5>
+					<div class="le">
+					<p>容量</p>
+					<p>类型</p>
+					</div>
+					<div class="ri">
+					<p>4000mAh</p>
+					<p>聚合物锂离子电池</p>
+					</div>
+					</div>
+					<div class="con">
+					<h5>连接性</h5>
+					<div class="le">
+					<p>蓝牙</p>
+					<p>接口</p>
+					<p>耳机接口</p>
+					<p>WiFi</p>
+					<p>OTG</p>
+					</div>
+					<div class="ri">
+					<p>蓝牙4.2</p>
+					<p>Micro-USB2.0</p>
+					<p>3.5mm接口</p>
+					<p>支持</p>
+					<p>支持</p>
+					</div>
+					</div>
+					<div class="con">
+					<h5>定位功能</h5>
+					<div class="le">
+					<p>GPS导航</p>
+					</div>
+					<div class="ri">
+					<p>支持</p>
+					</div>
+					</div>
+					<div class="con">
+					<h5>输入</h5>
+					<div class="le">
+					<p>键盘类型</p>
+					<p>输入方式</p>
+					</div>
+					<div class="ri">
+					<p>虚拟键盘</p>
+					<p>触控、后置指纹识别</p>
+					</div>
+					</div>
+					<div class="con">
+					<h5>感应器</h5>
+					<div class="le">
+					<p>陀螺仪</p>
+					<p>光线感应</p>
+					<p>重力感应</p>
+					<p>距离感应</p>
+					<p>电子罗盘</p>
+					<p>指南针</p>
+					</div>
+					<div class="ri">
+					<p>支持</p>
+					<p>支持</p>
+					<p>支持</p>
+					<p>支持</p>
+					<p>支持</p>
+					<p>支持</p>
+					</div>
+					</div>
+					<div class="con">
+					<h5>出厂标配</h5>
+					<div class="le">
+					<p>出厂标配</p>
+					</div>
+					<div class="ri">
+					<p>
+					主机，充电器，数据线，耳机，保护壳，贴膜（已贴好）、取卡针，快速指南，服务手册，手机丢失指南
+					</p>
+					</div>
+					</div>
+					</div>
+			</div>
+			
+		<!--导航栏3图库-->
+			<div class="navlist nav2" id="navlist2" style="display:none">
+				<div class="e7_page1 wrq e7_album_pcs" id="con_zero_4">
+				<h2 class="dsn">产品图库</h2>
+				<div class="e7_album_show">
+					<div class="e7_album_bigpcs" id="con_zero_big">
+						<img id="albumBigImg" width="500" height="500" src="images/goods/2.jpg">
+						<span class="big_to_left" id="btnBigImgLeft" title="上一张" style=""></span>
+						<span class="big_to_right" id="btnBigImgRight" title="下一张" style=""></span>
+					</div>
+					<div class="pcs_album_list" id="albumListBar">
+						<span class="pcs_prev" id="albumLeft" style=""></span>
+						<span class="pcs_next next_none" id="albumRight" style=""></span>
+						<div class="products_pcslist" id="albumListCon" style="position:relative;">
+							<div id="albumList" style="position:relative;height:75px;width:10000px;overflow:hidden;line-height: 98px;">
+								
+								<div class="products_pcslist_con">
+										<a class="products_pcsitem " tag="0" href="#">
+											<img src="images/goods/1.jpg"  alt="">
+										</a>
+										<a class="products_pcsitem products_pcsitem_cur" tag="1" href="#">
+											<img src="images/goods/mini_2.jpg"  alt="">
+										</a>
+										<a class="products_pcsitem" tag="2" href="#">
+											<img src="images/goods/mini_3.jpg"  alt="">
+										</a>
+										<a class="products_pcsitem" tag="3" href="#">
+											<img src="images/goods/mini_4.jpg"  alt="">
+										</a>
+										<a class="products_pcsitem" tag="4" href="#">
+											<img src="images/goods/mini_5.jpg"  alt=""></a>
+										<a class="products_pcsitem" tag="5" href="#">
+											<img src="images/goods/mini_6.jpg" alt="">
+										</a>
+										<a class="products_pcsitem" tag="6" href="#">
+											<img src="images/goods/mini_7.jpg"  alt="">
+										</a>
+										<a class="products_pcsitem" tag="7" href="#">
+											<img src="images/goods/mini_8.jpg"  alt="">
+										</a>
+										<a class="products_pcsitem" tag="8" href="#">
+											<img src="images/goods/mini_9.jpg"  alt="">
+										</a>
+										<a class="products_pcsitem" tag="9" href="#">
+											<img src="images/goods/mini_10.jpg"  alt="">
+										</a>
+										<a class="products_pcsitem" tag="10" href="#">
+											<img src="images/goods/mini_11.jpg"  alt="">
+										</a>
+										<a class="products_pcsitem" tag="11" href="#">
+											<img src="images/goods/mini_12.jpg"  alt="">
+										</a>
+										<a class="products_pcsitem" tag="12" href="#">
+											<img src="images/goods/mini_13.jpg"  alt="">
+										</a>
+										<a class="products_pcsitem" tag="13" href="#">
+											<img src="images/goods/mini_14.jpg"  alt="">
+										</a>
+										<a class="products_pcsitem" tag="14" href="#">
+											<img src="images/goods/mini_15.jpg"  alt="">
+										</a>
+										<a class="products_pcsitem" tag="15" href="#">
+											<img src="images/goods/mini_16.jpg"  alt="">
+										</a>
+										<a class="products_pcsitem" tag="16" href="#">
+											<img src="images/goods/mini_17.jpg"  alt="">
+										</a>
+										<a class="products_pcsitem" tag="17" href="#">
+											<img src="images/goods/mini_18.jpg"  alt="">
+										</a>
+										<a class="products_pcsitem" tag="18" href="#">
+											<img src="images/goods/mini_19.jpg"  alt="">
+										</a>
+										<a class="products_pcsitem" tag="19" href="#">
+											<img src="images/goods/mini_20.jpg"  alt="">
+										</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				</div>
+			</div>
 			<!-- 尾部 -->
 			<div class="g_ft">
 				<div class="g_ts">

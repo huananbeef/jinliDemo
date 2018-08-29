@@ -197,7 +197,6 @@ a, img {
 .selected img {
     position: absolute;
     height: 480px;
-    top: 115px;
     left: 0px;
 }
 .selected .selectedRight {
@@ -1341,4 +1340,40 @@ a {
 }
 .nub{
 	margin-top:58px;
+}
+/*放大镜*/
+.orig,{
+		width: 480px;
+		height: 480px;
+		position: absolute;
+		top:115px;
+}
+.fd{
+	width: 200px;
+	height: 200px;
+
+	position: absolute;
+	top:300px;
+}
+.fd{
+	left:435px;
+	overflow: hidden;
+	display: none;
+}
+.blocks{
+		/*小图的宽高比例
+			窗口的宽度 / 大图的宽度 * 窗口的宽度
+		*/
+	width:160px;
+	height:160px;
+	background:rgba(254,238,167,.4);
+	position: absolute;
+	left: 0;
+	top:0;
+	display: none;
+}
+.fd img{
+		display:block;
+		position:relative;
+		left:0px;			
 }

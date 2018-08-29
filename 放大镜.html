@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>放大镜</title>
+		
+		<style>
+			  body,ul,li{padding: 0;margin: 0;list-style: none;}
+				.orig,.fd{
+					width: 400px;
+					height: 400px;
+					border:1px solid red;
+					position: absolute;
+				}
+				.fd{
+
+					left:410px;
+					top:0;
+					overflow: hidden;
+					display: none;
+				}
+
+				.blocks{
+					/*小图的宽高比例
+						窗口的宽度 / 大图的宽度 * 窗口的宽度
+					*/
+					width:160px;
+					height:160px;
+					background:rgba(254,238,167,.4);
+					position: absolute;
+					left: 0;
+					top:0;
+					display: none;
+				}
+				.fd img{
+					display:block;
+					position:relative;
+					left:0px;
+					
+				}
+		</style>
+		
+	</head>
+	<body>
+		<!-- 建立显示原图窗口 -->
+		<div class="orig">
+			<!-- 插入要放大的图片 -->
+			<img src="images/goods/5.jpg" alt="" width="400">
+			
+			<!--加入用于锁定放大区域的小框-->
+			<div class="blocks">
+				
+			</div>
+		</div>
+		<!--建立显示放大图片的窗口-->
+		<div class="fd">
+			<img src="images/goods/5.jpg" alt="" style="" >
+		</div>
+		<script src='js/jquery-1.8.3.min.js'></script>
+		<script>
+        // 绑定鼠标移入原图窗口事件
+        $('.orig').mouseover(function(e){
+                $('.fd').css('display','block');
+                $('.blocks').css('display','block');
+
+        })
+        //绑定鼠标在原图窗口移动的事件
+        $('.orig').mousemove(function(e){
+
+                // 获取鼠标当前的位置
+                var x=e.clientX;
+                var y=e.clientY;
+                // 获取原图窗口距离文档的偏移位置
+                var sX=$('.orig').offset().left;
+                var sY=$('.orig').offset().top;
+
+                // 计算鼠标的相对位置（相对于原图窗口的偏移距离）
+                var mx=x-sX;
+                var my=y-sY;
+
+                // 获取小框框的宽高
+                var mw=$('.blocks').width()/2;
+                var mh=$('.blocks').height()/2;
+
+                // 鼠标移动后小框框的移动距离
+                $('.blocks').css({left:mx-mw+'px',top:my-mh+'px'});
+
+                // 获取小框框的偏移位置
+                    var lw=$('.blocks').position().left;
+                    var lh=$('.blocks').position().top;
+
+
+                // 判断边界（小框框只能在原图窗口范围内移动）
+                    var maxW=$('.orig').width()-$('.blocks').width()
+                    var maxH=$('.orig').height()-$('.blocks').height()
+                    // 左边界
+                    if(lw<=0){$('.blocks').css('left','0px');}
+                    // 右边界
+                    if(lw>=maxW){
+                        $('.blocks').css('left',maxW+'px');
+                    }
+                    // 上边界
+                    if(lh<=0){$('.blocks').css('top','0px');}
+                    // 下边界
+                    if(lh>=maxH){
+                        $('.blocks').css('top',maxH+'px');
+                    }
+
+                    // 获取小框框的偏移位置
+                    var lw=$('.blocks').position().left;
+                    var lh=$('.blocks').position().top;
+                // 计算鼠标在小图里的位置  *2.5计算大图移动的比例
+                    var newX=lw*2.5;
+                    var newY=lh*2.5;
+
+
+
+                $('.fd img').css({left:-newX+'px',top:-newY+'px'});
+        })
+        //绑定鼠标离开原图窗口事件
+        $('.orig').mouseout(function(){
+                $('.fd').css('display','none');
+                $('.blocks').css('display','none');
+        })
+		</script>
+	</body>
+</html>

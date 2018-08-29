@@ -1,0 +1,534 @@
+@import '_public.scss';
+/*主体部分*/
+
+body {
+    background: #f1f1f1;
+}
+
+.sl_wrapper {
+    margin-bottom: 30px;
+}
+.sl_wrapper {
+    min-height: 500px;
+    margin-bottom: 20px;
+    margin-top: 52px;
+    _height: 500px;
+}
+.sl_header, .sl_wrapper, .sl_footer {
+    display: block;
+    min-width: 960px;
+}
+.sl_wrapper .sl_area {
+    min-height: 500px;
+    _height: 500px;
+}
+
+.sl_area {
+    display: block;
+    width: 960px;
+    margin: 0 auto;
+    clear: both;
+}
+.sl_area {
+    width: 1190px;
+}
+
+.cart_process {
+    position: relative;
+    height: 66px;
+    padding: 18px 0 20px;
+    overflow: hidden;
+}
+.cart_process .title {
+    line-height: 61px;
+    padding-left: 45px;
+    font-size: 24px;
+    font-weight: normal;
+    color: #333333;
+    position: relative;
+}
+.cart_process .title i.icart {
+    background: url(../images/shopping/spirite.png) no-repeat -453px -76px;
+    width: 35px;
+    height: 32px;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 18px;
+    _left: -40px;
+}
+.cart_steps {
+    position: absolute;
+    right: 0;
+    top: 22px;
+    width: 375px;
+    overflow: hidden;
+    padding-top: 32px;
+    zoom: 1;
+}
+.cart_steps ul {
+    height: 25px;
+    overflow: hidden;
+}
+.cart_steps1 .step1 {
+    color: #ef4222;
+}
+.cart_steps .step1 {
+    width: 113px;
+}
+.cart_steps li {
+    float: left;
+    width: 125px;
+    overflow: hidden;
+    text-align: right;
+    font-size: 14px;
+    color: #999;
+}
+.cart_steps .step2 {
+    width: 132px;
+}
+.cart_steps .step3 {
+    width: 130px;
+}
+.cart_steps .icon {
+    position: absolute;
+    width: 375px;
+    height: 27px;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    background: url(../images/shopping/spirite.png) no-repeat 63px -488px;
+}
+.mycart_empty {
+    background: #fff;
+    border: none;
+}
+.mycart_empty {
+    border-top: solid 1px #f5f5f5;
+    padding: 110px 0 130px;
+    margin-bottom: 15px;
+}
+.mycart_empty .hint {
+    line-height: 51px;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+.mycart_empty a.btn {
+    display: block;
+    width: 120px;
+    height: 50px;
+    overflow: hidden;
+    margin: 0 auto;
+    line-height: 50px;
+    text-align: center;
+    background: url(../images/shopping/mycart_empty.png) no-repeat 0 0;
+    color: #fff;
+    font-size: 20px;
+}
+a:link, a:visited {
+    color: #333;
+}
+a:link, a:visited {
+    text-decoration: none;
+    outline: 0;
+}
+.user_recent_review {
+    margin-top: 20px;
+}
+.user_recent_review {
+    margin-bottom: 40px;
+}
+
+
+.user_recent_review .hd {
+    background: #FFF;
+    height: 60px;
+    line-height: 60px;
+    font-size: 18px;
+	border: #e9e9e9 1px solid;
+	border-bottom: none;
+}
+
+
+.user_recent_review .hd h4 {
+    font-weight: normal;
+}
+.user_recent_review .hd h4 {
+    padding-left: 20px;
+	font-size: 18px;
+}
+
+.recentgoods {
+    border: #e9e9e9 1px solid;
+	height: 434px;
+    overflow: hidden;
+    background: #ffffff;
+}
+
+
+.recentgoods li {
+    width: 296px;
+    margin-top: 0;
+    height: 394px;
+    padding: 20px 0;
+	float: left;
+	text-align: center;
+	border-left: #f5f5f5 1px solid;
+}
+
+.recentgoods li a.img {
+    width: 210px;
+    height: 300px;
+    display: block;
+    overflow: hidden;
+    margin: 0 auto;
+    position: relative;
+}
+.recentgoods li a.img img {
+    position: absolute;
+    left: -35px;
+}
+img {
+    border: 0;
+    vertical-align: middle;
+}
+.recentgoods li p {
+    text-align: center;
+    color: #404040;
+    font-size: 12px;
+    line-height: 20px;
+}
+
+p.rvgoodsname {
+    display: block;
+    width: 140px;
+    height: 40px;
+    overflow: hidden;
+    margin: 2px auto;
+}
+
+.recentgoods li p.prce {
+    font-family: Arial;
+    font-size: 18px;
+    color: #ef4222;
+    line-height: 30px;
+}
+.recentgoods li.user_hov a.btn_addcart {
+    display: block;
+}
+.recentgoods li a.btn_addcart {
+    display: none;
+}
+.recentgoods li .btn_addcart {
+    display: block;
+    width: 95px;
+    height: 27px;
+    background-color: #fd6803;
+    margin: 0 auto;
+    border: #ef4222 1px solid;
+    border-radius: 2px;
+    text-align: center;
+    line-height: 27px;
+    color: #fff;
+    background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0.11, rgb(239,65,34)),color-stop(0.56, rgb(255,106,0)));
+}
+.recentgoods li.user_hov a.btn_addcart {
+    display: block;
+}
+/*购物车详情页*/
+.mycart_empty {
+    margin-bottom: 10px;
+    border: 5px solid #e7e7e7;
+}
+ .top .boxBorRed {
+    width: 1180px;
+    border-top: 2px solid #85726c;
+	height:94px;
+	position:relative;
+}
+.top .trTitle {
+    position: relative;
+    z-index: 51;
+}
+.top .trTitle table {
+    background-color: #f1eeeb;
+}
+.cartList table {
+    width: 100%;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+table, tbody, tfoot, thead, tr, th, td {
+    border-collapse: collapse;
+    border-spacing: 0;
+    padding: 0px;
+    margin: 0px;
+}
+.top .boxBorRed table td {
+    padding: 0 5px;
+    text-align: center;
+}
+input {
+    vertical-align: middle;
+}
+button, input, select, textarea {
+    font-size: 100%;
+}
+body, button, input, select, textarea {
+    font: 12px/1.5 tahoma, arial, \5b8b\4f53, sans-serif;
+}
+
+.top .marginTop {
+    position: relative;
+    z-index: 52;
+    float: left;
+    display: inline;
+    margin-top: -1px;
+    padding: 0;
+    background-color: #fff;
+}
+.top table.inTable {
+    float: left;
+    width: 1180px;
+    font-family: Arial;
+}
+.top table tr.border {
+    background-image: url(../images/shopping/xuxianX.gif);
+    background-position: top;
+    background-repeat: repeat-x;
+}
+.top table.inTable td.btn_fx {
+    vertical-align: middle;
+    text-align: center;
+}
+.top table.inTable td {
+    padding: 10px 0 10px 0;
+    vertical-align: middle;
+}
+.top table.inTable td.btn_fx input {
+    float: none;
+    width: 15px;
+    height: 15px;
+    border: 0;
+    text-align: center;
+}
+.top table.inTable td input {
+
+    display: inline;
+    margin: 0;
+    padding: 0;
+    width: 30px;
+    height: 22px;
+
+    color: #666;
+
+    font: normal normal 12px/25px \5b8b\4f53;
+}
+.top table.inTable td.left {
+    padding-left: 10px;
+    color: #666;
+    text-align: left;
+    font: normal normal 12px/24px Arial;
+}
+ .top table.inTable td.left a {
+    color: #06c;
+    font: normal normal 12px/24px \5b8b\4f53;
+}
+.top table.inTable td.left img {
+    margin-right: 10px;
+    width: 60px;
+    height: 98px;
+    border: 0;
+}
+.top table.inTable td.left a.title {
+    color: #000;
+    font-size: 12px;
+}
+ table td b {
+    margin-left: 2px;
+    color: #333;
+    font: normal bold 16px/32px arial;
+}
+.top table.inTable td .jj_box {
+    position: relative;
+    float: left;
+    margin-left: 30px;
+    width: 58px;
+    height: 24px;
+    color: #000;
+}
+.top table.inTable td a.left, .top table.inTable td a.right {
+    float: left;
+    overflow: hidden;
+    margin-top: 0;
+    width: 13px;
+    height: 24px;
+    background-image: url(../images/shopping/cart_icon.png);
+    background-position: 0 -107px;
+    text-indent: -999px;
+}
+.top table.inTable td a.left_jy {
+    background-position: 0 -134px;
+}
+.top table.inTable td a.left {
+    float: left;
+    display: inline;
+    margin-right: 0;
+}
+.top table.inTable td input {
+    float: left;
+    display: inline;
+    margin: 0;
+    padding: 0;
+    width: 30px;
+    height: 22px;
+    border: 1px solid #bea9a0;
+    color: #666;
+    text-align: center;
+    font: normal normal 12px/25px \5b8b\4f53;
+}
+.top table.inTable td a.right {
+    background-position: -45px -107px;
+}
+.top table.inTable td.btn_edit a {
+    color: #3172b2;
+}
+a {
+    text-decoration: none;
+    outline: none;
+    cursor: pointer;
+}
+.top .trFooter {
+    position: relative;
+    z-index: 49;
+    float: left;
+    display: inline;
+    border-top: 1px dotted #9e9694;
+    background-color: #f1eeeb;
+}
+.trFooter ul {
+    padding: 15px;
+    width: 1150px;
+    border: 1px solid #ccc;
+	float:left;
+}
+
+
+.top .trFooter li {
+    float: left;
+    margin: 0;
+    padding: 0 15px 0 5px;
+    width: auto;
+    height: 40px;
+    line-height: 40px;
+	vertical-align: -1px;
+}
+
+.mycart_empty{
+    position: relative;
+    z-index: 500;
+}
+
+.top .trFooter li.funcBlue {
+    color: #06c;
+    text-decoration: underline;
+    cursor: pointer;
+}
+/*悬浮窗*/
+li.buy .buy_yhq_y, .listCart ul li.buy a.buy_yhq_n {
+    position: relative;
+    padding: 0 10px;
+    width: 180px;
+    text-align: left;
+    font-size: 12px;
+    color: #d63939;
+	background: url(../images/shopping/cart_icon.png) 8px -227px no-repeat;
+    text-indent: 22px;
+	float: left;
+    display: inline;
+    margin-right: 10px;
+    height: 50px;
+    line-height: 50px;
+    cursor: pointer;
+}
+#floatNav_buy {
+    width: 100%;
+}
+.listCart-fixed {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    margin-left: -50%;
+    background: #eee;
+    box-shadow: 0 -3px 10px rgba(0,0,0,0.2);
+	height:60px;
+	z-index:9999
+}
+#floatNav_buy ul {
+    padding: 10px 0;
+    margin: 0 auto;
+    float: none;
+    width: 960px;
+}
+#floatNav_buy li {
+    margin: 0;
+    padding: 0;
+}
+a.buy {
+    float: right;
+    margin-right: 0;
+    width: 210px;
+    border: 0;
+    background: url(../images/shopping/cart_icon.png) 0 0 no-repeat;
+    color: #fff;
+    font-family: microsoft yahei;
+	height:50px;
+	display: inline;
+	text-align: center;
+    font: normal 14px/40px \5b8b\4f53;
+	font-size: 22px;
+    line-height: 50px;
+    cursor: pointer;
+}
+
+.buy_bc {
+    position: relative;
+    width: 150px;
+    background: url(../images/shopping/cart_icon.png) 7px -189px no-repeat;
+    font-size: 12px;
+	float: left;
+    display: inline;
+    margin-right: 10px;
+    height: 50px;
+    color: #666;
+    text-align: center;
+    font: normal 14px/40px \5b8b\4f53;
+    line-height: 50px;
+}
+
+
+a.total_price {
+	float:right;
+    width: 350px;
+    border: 0;
+    font-size: 12px;
+    cursor: default;
+	display: inline;
+    margin-right: 10px;
+    height: 50px;
+    background-image: none;
+    color: #666;
+    text-align: center;
+    font: normal 14px/40px \5b8b\4f53;
+    line-height: 50px;
+}
+li.buy a.total_price b {
+    color: #d63939;
+    font-size: 24px;
+}
+li.buy a.total_price em {
+    color: #999;
+}
