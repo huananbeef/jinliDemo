@@ -28,6 +28,10 @@
 									<a href="#" class="reg">注册</a>
 									<b></b>
 								</span>
+								<!--登录成功后-->
+								<span class="loginReg2" id="JloginReg2" style="display:block">
+									
+								</span>
 								<span class="cart" id="Jcart">
 									<span class="cart_hd">
 										<a href="#" hidefocus="true">
@@ -39,7 +43,20 @@
 										<i class="whitespace"></i>
 									</span>
 									<span class="cart_bd" id="JcartBd">
-										<span class="cart_empty">您的购物车是空的，快去挑选喜欢的商品吧！</span>
+										<div class="cart_empty" style="display:none">您的购物车是空的，快去挑选喜欢的商品吧！</div>
+										<!--购物车部分-->
+										<div class="cart_shopping" style="display:none">
+														
+											<div class="cart-total .clearfix">
+												<span class="total">共 <em class="spl">0</em> 件商品
+														<span class="price">
+															<em class="spp">0</em>元
+														</span>
+												</span>
+													<a href="shopping.html" class="btn btn-primary btn-cart">去购物车结算</a>
+															
+											</div>
+										</div>
 									</span>
 								</span>
 							</div>
@@ -166,16 +183,18 @@
 						<div class="list_page">
 							<form name="selectPageForm" action="/goods.php" method="get">
 								<div id="pager" class="ui_page">
-									<a class="ui_page_first" href="">首页</a>
-									<a class="ui_page_prev" href="">上一页</a>
-									<a class="ui_page_curr" href="">1</a>
-									<a href="">2</a>
-									<a href="">3</a>
-									<a href="">4</a>
-									<a href="">5</a>
-									<a href="">6</a>
-									<a class="ui_page_next" href="">下一页</a>
-									<a class="ui_page_last" href="">末页</a>
+									<!-- <a class="ui_page_first" href="javascript:;">首页</a>
+									<a class="ui_page_prev" href="javascript:;">上一页</a> -->
+									<span class="page_num">
+										<a class="page_bg ui_page_curr"href="javascript:;">1</a>
+										<a class="page_bg" href="javascript:;">2</a>
+										<a class="page_bg" href="javascript:;">3</a>
+										<a class="page_bg" href="javascript:;">4</a>
+										<a class="page_bg" href="javascript:;">5</a>
+										<a class="page_bg" href="javascript:;">6</a>
+									</span>
+									<!-- <a class="ui_page_next" href="javascript:;">下一页</a>
+									<a class="ui_page_last" href="javascript:;">末页</a> -->
 								</div>
 							</form>
 						</div>

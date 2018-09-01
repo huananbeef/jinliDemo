@@ -345,3 +345,16 @@ address, cite, dfn, em, var {
     text-align: center;
     white-space: nowrap;
 }
+#JmNavMobile:hover .menu-box {
+     display: none;
+}
+/*选项按钮*/
+.cur_page_bg, .page_num a:hover {
+    color: rgb(54, 171, 135);
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(54, 171, 135);
+    border-image: initial;
+    text-decoration: none;
+    background: grey;
+}

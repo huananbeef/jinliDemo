@@ -15,6 +15,41 @@ define(["jquery","jquery-cookie"],function($){
 					} 
 				})
 				
+			/*读取是否存在用户信息的cookie*/
+			
+			function userCookie(){
+				if($.cookie('jinliusers')){
+					/* alert('存在'); */
+					$('#JloginReg').css('display','none');
+					$('#JloginReg2').css('display','block');
+					var str1 = $.cookie('jinliusers');
+				
+					var strN1 = str1.replace('&','=');
+					var str = strN1.split('=');
+					
+					
+					var str2 = `<span class="nick_username">Hi,amigo用户:` + str[1] + `</span>
+								<a href="javascript:;" hidefocus="true" target="_self">
+									<span class="fn_hl">我的账户</span>
+								</a> 
+								<span class="line">|</span> 
+								<a href="javascript:;" hidefocus="true" target="_self" id="quit">退出</a>`
+					$('#JloginReg2').append(str2);
+					
+					$('#quit').click(function(){
+						$('#JloginReg').css('display','block');
+						$('#JloginReg2').css('display','none');
+						$.cookie('jinliusers', null);
+					})
+					
+				}else{
+					/* alert('未登录') */
+				}
+				
+				
+			}
+			userCookie();
+			
 			
 			
 			
@@ -578,61 +613,77 @@ define(["jquery","jquery-cookie"],function($){
 			$('.hint h3 span').html($(this).attr('price'));
 			var imgSrc = 'images/goods/' + $(this).attr('pic')+'.jpg';
 			$('#selectedImg').attr('src',imgSrc);
-			
+			$('.selectedImg').attr('src',imgSrc);
 		})
 		
-		//放大镜
-		$('.zoomPad .mark').hover(function(){
-				$('.zoomPad .float_layer').css('display','block');
-				$('.zoomWindow').css('display','block')
+
+		//给购物车按钮添加点击事件
+		/******放大镜图片切换*******/
+			function det(){
+				$('.gallery_nav li').click(function(){
+					var index = $(this).index();
+					$('.gallery_nav li a').removeClass();
+					$('.gallery_nav li a').eq(index).addClass('gall_ashow');
+					$('.gallery_nav li a s').removeClass();
+					$('.gallery_nav li a s').eq(index).addClass('gall_sshow');
+					$('.gallery_cont').removeClass('gall_dshow');
+					$('.gallery_cont').eq(index).addClass('gall_dshow')
+				})
+			}
+			
+			det()
+			
+			$('.gallery_cont').hover(function(){
+				var index = $(this).index()
+				console.log(index)
+				$('.zoomPad .float_layer').eq(index).css('display','block');
+				$('.zoomWindow').eq(index).css('display','block')
 			},function(){
-				$('.zoomPad .float_layer').css('display','none');
-				$('.zoomWindow').css('display','none')
+				var index = $(this).index()
+				$('.zoomPad .float_layer').eq(index).css('display','none');
+				$('.zoomWindow').eq(index).css('display','none')
 			}).mousemove(function(e){
 				var index = $(this).index()
-				var shadeWidth = $('.float_layer').eq(index).width(),//阴影的宽度 
-			        shadeHeight = $('.float_layer').eq(index).height(),//阴影的高度 
-			        middleWidth = $('.zoomPad').eq(index).width(),//容器的宽度 
-			        middleHeight = $('.zoomPad').eq(index).height(),//容器的高度 
-			        bigWidth = $('.zoomWindow').eq(index).width(),//放大图片盒子的宽度 
-			        bigHeight = $('.zoomWindow').eq(index).height(),//放大图片盒子的高度 
-			        rateX = bigWidth / shadeWidth,//放大区和遮罩层的宽度比例 
-			        rateY = bigHeight / shadeHeight;//放大区和遮罩层的高度比例 
-			        
-			        var x = e.pageX, 
-		         	 y = e.pageY; 
-		         	 
-		         	 //设置遮罩层的位置 
-		         	 $('.float_layer').offset({ 
-			          top: y-shadeHeight/2, 
-			          left: x-shadeWidth/2 
-			        }); 
-			        
-			         //获取遮罩层相对父元素的位置 
-				        var cur = $('.float_layer').eq(index).position(), 
-				          _top = cur.top, 
-				          _left = cur.left, 
-				          hdiffer = middleHeight - shadeHeight, 
-				          wdiffer = middleWidth - shadeWidth; 
-				  
-				        if (_top < 0) _top = 0; 
-				        else if (_top > hdiffer) _top = hdiffer; 
-				        if (_left < 0) _left = 0; 
-				        else if (_left > wdiffer) _left =wdiffer; 
-				  
-				        //判断完成后设置遮罩层的范围 
-				        $('.float_layer').eq(index).css({ 
-				          top: _top, 
-				          left: _left 
-				        }); 
-				  
-				        //设置放大区图片移动 
-				        $('.zoomWimg img').eq(index).css({ 
-				          top: - rateY*_top, 
-				          left: - rateX*_left 
-				        }); 
-			})
+					// 获取鼠标当前位置
+							var pageX = e.pageX;
+							var pageY = e.pageY;
+							// 获取“缩略图”窗口在整个文档中的偏移位置
+							var offsetX = $('.zoomPad .mark').eq(index).offset().left;
+							var offsetY = $('.zoomPad .mark').eq(index).offset().top;
+							// 计算鼠标在缩略图中的相对位置
+							var relativeX = pageX - offsetX;
+							var relativeY = pageY - offsetY;
+							// 考虑到鼠标处于“放大镜”框的中心，我们要根据鼠标位置计算“放大镜”框的位置
+							var magOffsetX = $('.float_layer').eq(index).width() / 2;
+							var magOffsetY = $('.float_layer').eq(index).height() / 2;
+							$('.float_layer').eq(index).css({ left: relativeX - magOffsetX + 'px',
+									top: relativeY - magOffsetY + 'px' });
+							// 获取“放大镜”框的新位置，后面会用到
+							var magX = $('.float_layer').eq(index).position().left;
+							var magY = $('.float_layer').eq(index).position().top;
 		
+							// 二、处理越界情况
+		
+							// 确定边界
+							var maxMagX = $('.zoomPad .mark').eq(index).width() - $('.float_layer').eq(index).width()
+							var maxMagY = $('.zoomPad .mark').eq(index).height() - $('.float_layer').eq(index).height()
+							// 左边界
+							if (magX <= 0) { $('.float_layer').eq(index).css('left', '0px'); }
+							// 右边界
+							if (magX >= maxMagX) { $('.float_layer').eq(index).css('left', maxMagX + 'px'); }
+							// 上边界
+							if (magY <= 0) { $('.float_layer').eq(index).css('top', '0px'); }
+							// 下边界
+							if (magY >= maxMagY) { $('.float_layer').eq(index).css('top', maxMagY + 'px'); }
+		
+							// 三、其次实现“原图”窗口中的图片随“放大镜”框的移动而相应移动
+		
+							// 按照之前确定的缩放比例移动“原图”窗口中的图片
+							// 注意：图片的移动方向与鼠标的移动方向是相反的！
+							var originX = magX * 0.8;
+							var originY = magY * 0.8;
+							$('.zoomWimg img').eq(index).css({ left: -originX + 'px', top: -originY + 'px' });
+			})
 		
 		
 		
@@ -713,6 +764,7 @@ define(["jquery","jquery-cookie"],function($){
 
 		}
 		slideNav()
+		
 		/*放大镜部分*/
 		$('.orig').mouseover(function(e){
 						$('.fd').css('display','block');
@@ -724,8 +776,8 @@ define(["jquery","jquery-cookie"],function($){
 		$('.orig').mousemove(function(e){
 		
 						// 获取鼠标当前的位置
-						var x=e.clientX;
-						var y=e.clientY;
+						var x=e.pageX;
+						var y=e.pageY;
 						// 获取原图窗口距离文档的偏移位置
 						var sX=$('.orig').offset().left;
 						var sY=$('.orig').offset().top;
@@ -766,8 +818,8 @@ define(["jquery","jquery-cookie"],function($){
 							var lw=$('.blocks').position().left;
 							var lh=$('.blocks').position().top;
 						// 计算鼠标在小图里的位置  *2.5计算大图移动的比例
-							var newX=lw*2;
-							var newY=lh*2;
+							var newX=lw*0.8;
+							var newY=lh*0.8;
 		
 		
 		
@@ -781,50 +833,86 @@ define(["jquery","jquery-cookie"],function($){
 
 
 		/*购买*/
-		$('#buyBtn').click(function(){
+		$('#buyBtn').click(function(e){
 			var goodId = $('.selectedPhone').attr('pic');
-			var goodName = $('.selectedPhone').html();
-			var goodPrice = $('.selectedPhone').attr('price');
+			var goodType = $('.selectedPhone').text();
+			var goodPrice = parseFloat($('.selectedPhone').attr('price'));
 			var goodSrc = $('#selectedImg').attr('src');
-			var goodNumber = $('#numbers').val();
+			var goodNumber = parseFloat($('#numbers').val());
+			var goodName = $('.selectedPhone').attr('data-name');
+			
 			//获取cookie
 			var cartStr = $.cookie("cart") ? $.cookie("cart"): "";
 			//将字符串转成对象
 			var cartObj = convertCartStrToObj(cartStr);
 			
 			if(goodId in cartObj){
-				alert('购物车中已经含有该商品，请前往付款');
-				location.href = "shopping.html";
+				//goodNumber
+				cartObj[goodId].num = parseInt(cartObj[goodId].num) + parseInt(goodNumber);
+
+				/* console.log(cart); */
 			}else{
 				cartObj[goodId] = {
 					"name" : goodName,
 					"price" : goodPrice,
 					"num" : goodNumber,
-					"src" : goodSrc
+					"src" : goodSrc,
+					"type" : goodType
 				};
-				//将新的购物车信息存回cookie
-				//将对象转为字符串
-				cartStr = JSON.stringify(cartObj);
-				console.log(cartStr);
-				//存放cookie
-				
-				//飞入购物车效果
 				
 			}
+			//将新的购物车信息存回cookie
+			//将对象转为字符串
+			cartStr = convertObjToCartStr(cartObj);
+			/* cartStr = JSON.stringify(cartObj); */
 			
-			location.href = "shopping.html";
+			//存放cookie
+			$.cookie("cart",cartStr,{expires : 7,path:"/"});
+			//飞入购物车效果
+			console.log(cartStr);
+			/* location.href = "shopping.html"; */
+			/* location.href = "shopping.html"; */
 		})
 		
 		function convertCartStrToObj(cartStr){
 			if(!cartStr){
 				return {};
 			}
-			console.log(cartStr);
-			return JSON.parse(cartStr);
+			var goods = cartStr.split(":");
+			var obj = {};
+			for(var i = 0; i < goods.length; i ++){
+				var data = goods[i].split(",");
+				//以商品的id为健，商品的其他信息为值，这个值也设计为一个对象
+				obj[data[0]] = {
+					name: data[1],
+					price: parseFloat(data[2]),
+					num: parseInt(data[3]),
+					src: data[4],
+					type:data[5]
+				}
+			}
+			return obj;
+			/* console.log(cartStr);
+			return JSON.parse(cartStr); */
 		}
+		function convertObjToCartStr(obj){
+					var cartStr = "";
+					//遍历对象
+					for(var id in obj){
+						if(cartStr){
+							cartStr += ":";
+						}
+						
+						cartStr += id + "," + obj[id].name + "," + obj[id].price + "," + obj[id].num + "," + obj[id].src + "," +obj[id].type;
+					}
+					return cartStr;
+			}
+		
+		
 		//加载购物车中的信息
 		function loadCart(){
 			var cartStr = $.cookie("cart") ? $.cookie("cart"):"";
+			var cartObj = convertCartStrToObj(cartStr);
 			//获取到购物车中所有商品的数量
 			var total = 0;
 			for(var id in cartObj){
@@ -832,9 +920,110 @@ define(["jquery","jquery-cookie"],function($){
 			}
 			$('#buy').val("购物车("+ total + ")");
 		}
-			
-		//给购物车按钮添加点击事件
 		
+		/*右上购物车*/
+		var cartStr = $.cookie("cart") ? $.cookie("cart") : "";
+		console.log(cartStr);
+		if(!cartStr) {
+			
+			$(".cart_empty").css({
+				display: "block"
+			});
+			}else {
+				
+				$('.mycart_empty').css('padding-top','0px');
+				
+				var cartObj = convertCartStrToObj(cartStr);
+				console.log(cartObj)
+				$('.cart_shopping').css('display','block');
+				/*遍历所有的商品，获取其总价格和数量*/
+				var goodsPriceAll = 0;
+				var goodsListAll = 0;
+				
+				
+				
+				/*遍历所有的商品生成html添加到购物车列表中去*/
+				$('#shoppinglist').css('display','block');
+				
+				
+				
+		
+				for(var id in cartObj) {
+					/*商品信息对象*/
+					var good = cartObj[id];
+					var totalprice = good.num * good.price
+					var strSmall = `<ul class="cart-list" pic=" `+ id + `">
+													<li>
+														<div class="cart-item">
+															<a href="" class="thumb">
+																<img src="`+ good.src + `" alt="" style="width: 60px;height: 60px">
+																<a href="" class="name">` + good.name +`<br>`+ good.type+`</a>
+																<span class="price">
+																	`+ good.price + ` × ` + good.num+`
+																</span>
+																<a class="btn-del J_delItem" href="javascript: void(0);" gid="2182300107_0_buy" data-isbigtap="false">
+																<i class="iconfont">X</i>
+																</a>
+															</a>
+														</div>
+													</li>
+												</ul>`;
+					
+					$(strSmall).prependTo("#JcartBd");
+					
+					/*悬浮导航栏购物车数量和总价*/
+					goodsListAll += parseInt(good.num);
+					goodsPriceAll += parseInt(good.num) * parseInt(good.price);
+					
+				}
+				$('#JcartNum').text(goodsListAll);
+				$('.total_num_1-normal').html(goodsListAll)
+				$('.total_1-normal').text(goodsPriceAll);
+				$('#JcartBd .total .spl').text(goodsListAll);
+				$('#JcartBd .total .spp').text(goodsPriceAll);
+		}
+		function convertObjToCartStr(obj) {
+				var cartStr = "";
+				for(var id in obj) {
+					if(cartStr) {
+						cartStr += ":";
+					}
+					cartStr += id + "," + obj[id].name + "," + obj[id].price + "," + obj[id].num + "," + obj[id].src + ","+obj[id].type;
+				}
+				return cartStr;
+			}
+			
+				
+		function convertCartStrToObj(cartStr) {
+			if(!cartStr) {
+				return {}
+			}
+			var goods = cartStr.split(":");
+			var obj ={};
+			for(var i = 0;i < goods.length;i++){
+				var data = goods[i].split(",");
+				//以商品的id为健，商品的其他信息为值，这个值也设计为一个对象
+				obj[data[0]] = {
+					name: data[1],
+					price: parseFloat(data[2]),
+					num: parseInt(data[3]),
+					src: data[4],
+					type:data[5]
+				}
+			}
+			console.log(obj);
+			return obj;
+			
+		}
+					/*右上小小购物车*/
+					$('#Jcart').hover(function(){
+						$('#Jcart').addClass('cart_hover');
+						$('#JcartBd').finish().fadeIn();
+					},function(){
+						$('#Jcart').removeClass('cart_hover');
+						$('#JcartBd').finish().fadeOut();
+					})
+
 
 
 		/*公共结尾部分*/

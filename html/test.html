@@ -10,189 +10,198 @@
 		<script src="js/require.js" defer async="true" data-main="js/main5"></script>
 	</head>
 	<body>
-		<!--中间部分-->
-		<div class="sl_wrapper">
-			<div class="sl_area">
-			<div class="cart_process">
-				<h1 class="title">购物车<i class="icart"></i></h1>
-				<div class="cart_steps cart_steps1">
-					<ul>
-						<li class="step1">查看购物车</li>
-						<li class="step2">确认订单信息</li>
-						<li class="step3">确认/支付订单</li>
-					</ul>
-				<div class="icon"></div>
-				</div>
-			</div>
-			<div class="mycart_empty">
-				<!-- <p class="hint">您的购物车是空的，去挑选喜欢的商品吧！</p>
-				<div class="op">
-					<a href="/" hidefocus="true" target="_self" class="btn">去购物</a>
-				</div> -->
-				<div class="top cartDto cart_1-normal" id="orderSource_0_detail">
-					<div class="boxBorRed .clearfix">
-						<div class="trTitle">
-							<table width="100%" border="0" cellspacing="0" cellpadding="0">
-								<tbody>
-									<tr>
-                                        <td height="34" width="8%">
-											<input class="e-selall selectAll selectAll_1-normal" type="checkbox" name="checkbox">
-											<label for="checkbox0_t" style="cursor: pointer;">全选</label>
-								        </td>
-										<td>商品名称</td>
-										<td width="13%">单价</td>
-										<td width="13%">数量</td>										
-										<td width="13%">小计</td>
-                                        <td width="13%">&nbsp;</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>                            
-						<div class="marginTop cartGoodsList cartGoodsList_1-normal" name="goodsList_carttype">
-							<table width="100%" border="0" cellspacing="0" cellpadding="0" class="inTable" id="tbHover" data-carttype="1-normal">
-								<tbody>
-									<tr class="border " data-key="eb2e3cf4-5587-491a-aa45-7206efd9892f" data-carttype="1-normal" data-carttypeshow="1-normal">
-										<td width="8%" class="btn_fx">
-											<input type="checkbox" name="goodsSelect" value="6215154" class="goodsSelect">
-										</td>
-										<td width="8%" class="left">
-											<a href="/goods/6215154.html" target="_blank" class="prod-img">
-											<img src="https://img18.yesmyimg.com/n/154/215/6215154/8466826_60x98.png"></a>
-										</td>
-										<td class="left">
-											<a href="/goods/6215154.html" target="_blank" class="title">洛神山庄西拉赤霞珠干红葡萄酒(又名：奔富洛神山庄干红葡萄酒)</a>
-											<br>
-											Rawsons Retreat Shiraz Cabernet
-											<br>
-											<span class="red"></span>
-											<br>
-											<ins id="error_5152044"></ins>
-										</td>
-										<td width="13%" class="dj_price">
-											¥<b>37.0</b><br>
-										</td>
-										<td width="13%">
-											<span class="jj_box">
-												<a title="减少" class="left   subAmount cartSubAmount">-</a>
-												<input name="input" class="editAmount cartEditAmount" type="text" value="2" maxlength="3" minvalue="1" maxvalue="500" onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}" onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'0')}else{this.value=this.value.replace(/\D/g,'')}">
-												<a title="增加" class="right  addAmount cartAddAmount">+</a>				 
-											 </span>
-										</td>										
-										<td class="xj_price" width="13%">
-											¥<b>74.0</b>
-										</td>
-										<td width="13%" class="btn_edit">
-											<div class="tip_fram col-blue addFavoriteSuccess" style="display:none">
-												<div class="tip_content">
-													<p>
-														<i class="suc-icon"></i>
-														  加入收藏夹成功!
-													</p>
-												</div>
-												<b class="tip_icon"></b>
-											</div>
-											<div class="tip_fram col-red addFavoriteFail" style="display:none">
-											
-											<b class="tip_icon"></b>
-											</div> 
-												<br>
-											<a class="btn-remove removeGoods" data-goodsnum="2">删除</a>
-										</td>
-									</tr>
-								</tbody>
-							</table>
-							</div>
-							<div class="trFooter">
-								<ul>
-									<li><input class="e-selall selectAll selectAll_1-normal" type="checkbox" name="checkbox">
-									    <label>全选</label>
-									 </li>
-									 <li class="removeSelectedGoods">批量删除</li>
-									 <!-- <li class="addSelectedFavorite clicktr">批量加入收藏夹</li> -->
-									<!--  <li class='clearIsNotStore'>清除缺货商品</li> -->
-									
-								</ul>
-							</div>
+		<div class="header">
+			<div class="g_hd" id="glbHeader">
+				<div class="wrapper" id="Jslheaderbd">
+					<a href="#" hidefocus="true" class="g_logo fl tin">金品质立天下</a>
+					<div class="fr g_hd_main">
+						<div class="g_quickMenu fr" id="JquickMenu">
+							<!-- 登录前 -->
+							<span class="loginReg" id="JloginReg" style="display:block">
+								<a href="#" class="login" style="color:#ef4222">amigo账号登录</a>
+								<span class="line">|</span>
+								<a href="#" class="reg">原账号登录</a>
+								<b></b>
+								<span class="line">|</span>
+								<a href="#" class="reg">注册</a>
+								<b></b>
+							</span>
+							<!--登录成功后-->
+							<span class="loginReg2" id="JloginReg2" style="display:block">
+								
+							</span>
+							<!--导航栏购物车-->
+							<span class="cart" id="Jcart">
+								<span class="cart_hd">
+									<a href="#" hidefocus="true">
+										购物车(
+										<em id="JcartNum">0</em>
+										)
+										<b></b>
+									</a>
+									<i class="whitespace"></i>
+								</span>
+								<span class="cart_bd" id="JcartBd">
+									<div class="cart_empty" style="display:none">您的购物车是空的，快去挑选喜欢的商品吧！</div>
+									<div class="cart_shopping" style="display:none">
+													
+										<div class="cart-total .clearfix">
+											<span class="total">共 <em class="spl">0</em> 件商品
+													<span class="price">
+														<em class="spp">0</em>元
+													</span>
+											</span>
+												<a href="javascript:;" class="btn btn-primary btn-cart">去购物车结算</a>
+														
+										</div>
+									</div>
+								</span>
+							</span>
+						</div>
+						<div class="g_search fr">
+							<form action="javascript:;" id="search">
+								<input type="text" class="txt fl" name="kw" value id="JsearchTxt" placeholder="输入搜索内容">
+								<input type="submit" class="btn_so fr" value="">
+							</form>
 						</div>
 					</div>
-					
-						<div id="floatNav_buy" class="listCart listCart-fixed  cartCoupon cartCoupon_1-normal" data-carttype="1-normal" style="display: block;">
-							<ul class=".clearfix">
-								<li class="buy q_select_hover">
-									<div class="payexpress_panl" id="quick_check_out_div" style="display:none;"></div>
-									<a class="buy" onclick="toBalance();">去结算</a>
-									<a class="buy_bc memberGift memberGift_1-normal" style="cursor: default;">  
-										<font class="noGift" style="cursor: default;">没有可领取礼品</font>
-									</a>
-									<div class="buy_yhq_y couponList_1-normal">
-										商品没有符合优惠券使用条件
-									</div>
-									<a class="total_price"> 商品数量：<b class="total_num_1-normal" style=" font: bold 14px Arial;">1</b>&nbsp;件&nbsp;&nbsp;<strong>应付金额</strong><em>(不含运费)</em>:<i>¥</i><b class="total total_1-normal">168.0</b>
-									</a>
-								</li>
-							</ul>      
-						</div>	
-					
-			</div>
-			<div class="user_recent_review" id="Jhistory">
-				<div class="hd">
-					<h4>最近浏览</h4>
 				</div>
-				<ul class="recentgoods">
-					<li class="">
-						<a href="javascript:;" target="_blank" hidefocus="true" class="img" title="金立F6 星夜蓝">
-							<img src="images/shopping/1375_thumb_P_1511678651374.jpg" width="300" height="300" alt="金立F6 星夜蓝">
-						</a>
-						<p class="rvgoodsname">
-							<a href="javascript:;" target="_blank" title="金立F6 星夜蓝">金立F6 星夜蓝</a>
-						</p>
-						<p class="prce">
-							<em>¥</em>1399.00
-						</p>
-						<a href="#" target="_self" class="btn_addcart" goods_id="1375" goods_attr="19673">加入购物车</a>
-					</li>
-					<li class="">
-						<a href="javascript:;" target="_blank" hidefocus="true" class="img" title="金立F6 星夜蓝">
-							<img src="images/shopping/1375_thumb_P_1511678651374.jpg" width="300" height="300" alt="金立F6 星夜蓝">
-						</a>
-						<p class="rvgoodsname">
-							<a href="javascript:;" target="_blank" title="金立F6 星夜蓝">金立F6 星夜蓝</a>
-						</p>
-						<p class="prce">
-							<em>¥</em>1399.00
-						</p>
-						<a href="#" target="_self" class="btn_addcart" goods_id="1375" goods_attr="19673">加入购物车</a>
-					</li>
-					<li class="">
-						<a href="javascript:;" target="_blank" hidefocus="true" class="img" title="金立F6 星夜蓝">
-							<img src="images/shopping/1375_thumb_P_1511678651374.jpg" width="300" height="300" alt="金立F6 星夜蓝">
-						</a>
-						<p class="rvgoodsname">
-							<a href="javascript:;" target="_blank" title="金立F6 星夜蓝">金立F6 星夜蓝</a>
-						</p>
-						<p class="prce">
-							<em>¥</em>1399.00
-						</p>
-						<a href="#" target="_self" class="btn_addcart" goods_id="1375" goods_attr="19673">加入购物车</a>
-					</li>
-					<li class="">
-						<a href="javascript:;" target="_blank" hidefocus="true" class="img" title="金立F6 星夜蓝">
-							<img src="images/shopping/1375_thumb_P_1511678651374.jpg" width="300" height="300" alt="金立F6 星夜蓝">
-						</a>
-						<p class="rvgoodsname">
-							<a href="javascript:;" target="_blank" title="金立F6 星夜蓝">金立F6 星夜蓝</a>
-						</p>
-						<p class="prce">
-							<em>¥</em>1399.00
-						</p>
-						<a href="#" target="_self" class="btn_addcart" goods_id="1375" goods_attr="19673">加入购物车</a>
-					</li>
-				</ul>
-			</div>
-
-
 			</div>
 		</div>
+		<!--中间部分-->
+		<div class="sl_wrapper">
+					<div class="sl_area">
+					<div class="cart_process">
+						<h1 class="title">购物车<i class="icart"></i></h1>
+						<div class="cart_steps cart_steps1">
+							<ul>
+								<li class="step1">查看购物车</li>
+								<li class="step2">确认订单信息</li>
+								<li class="step3">确认/支付订单</li>
+							</ul>
+						<div class="icon"></div>
+						</div>
+					</div>
+					<div class="mycart_empty">
+						<div class="blank" style="display:none">
+							<p class="hint">您的购物车是空的，去挑选喜欢的商品吧！</p>
+							<div class="op">
+								<a href="/" hidefocus="true" target="_self" class="btn">去购物</a>
+							</div>
+						</div>
+						<!--购物车清单-->
+						<!--固定部分-->
+						<div class="top cartDto cart_1-normal" id="shoppinglist" style="display:none">
+							<div class="boxBorRed .clearfix">
+								<div class="trTitle">
+									<table width="100%" border="0" cellspacing="0" cellpadding="0">
+										<tbody>
+											<tr>
+												<td height="34" width="8%">
+													<input class="e-selall selectAll selectAll_1-normal" type="checkbox" name="checkbox">
+													<label for="checkbox0_t" style="cursor: pointer;">全选</label>
+												</td>
+												<td>商品名称</td>
+												<td width="13%">单价</td>
+												<td width="13%">数量</td>										
+												<td width="13%">小计</td>
+												<td width="13%">&nbsp;</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>    
+								<!--变动部分-->
+								
+									<div class="trFooter">
+										<ul>
+											<li><input class="e-selall selectAll selectAll_1-normal" type="checkbox" name="checkbox">
+												<label>全选</label>
+											</li>
+											<li class="removeSelectedGoods">批量删除</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div id="floatNav_buy" class="listCart listCart-fixed  cartCoupon cartCoupon_1-normal" data-carttype="1-normal" style="display: block;">
+								<ul class=".clearfix">
+									<li class="buy q_select_hover">
+										<div class="payexpress_panl" id="quick_check_out_div" style="display:none;"></div>
+										<a class="buy" onclick="toBalance();">去结算</a>
+										<a class="buy_bc memberGift memberGift_1-normal" style="cursor: default;">  
+											<font class="noGift" style="cursor: default;">没有可领取礼品</font>
+										</a>
+										<div class="buy_yhq_y couponList_1-normal">
+											商品没有符合优惠券使用条件
+										</div>
+										<a class="total_price"> 商品数量：<b class="total_num_1-normal" style=" font: bold 14px Arial;">0</b>&nbsp;件&nbsp;&nbsp;<strong>应付金额</strong><em>(不含运费)</em>:<i>¥</i><b class="total total_1-normal">0</b>
+										</a>
+									</li>
+								</ul>      
+							</div>
+						
+						
+						
+							<!--悬浮结算页-->	
+					</div>
+					<div class="user_recent_review" id="Jhistory">
+						<div class="hd">
+							<h4>最近浏览</h4>
+						</div>
+						<ul class="recentgoods">
+							<li class="">
+								<a href="javascript:;" target="_blank" hidefocus="true" class="img" title="金立F6 星夜蓝">
+									<img src="images/shopping/1375_thumb_P_1511678651374.jpg" width="300" height="300" alt="金立F6 星夜蓝">
+								</a>
+								<p class="rvgoodsname">
+									<a href="javascript:;" target="_blank" title="金立F6 星夜蓝">金立F6 星夜蓝</a>
+								</p>
+								<p class="prce">
+									<em>¥</em>1399.00
+								</p>
+								<a href="#" target="_self" class="btn_addcart" goods_id="1375" goods_attr="19673">加入购物车</a>
+							</li>
+							<li class="">
+								<a href="javascript:;" target="_blank" hidefocus="true" class="img" title="金立F6 星夜蓝">
+									<img src="images/shopping/1375_thumb_P_1511678651374.jpg" width="300" height="300" alt="金立F6 星夜蓝">
+								</a>
+								<p class="rvgoodsname">
+									<a href="javascript:;" target="_blank" title="金立F6 星夜蓝">金立F6 星夜蓝</a>
+								</p>
+								<p class="prce">
+									<em>¥</em>1399.00
+								</p>
+								<a href="#" target="_self" class="btn_addcart" goods_id="1375" goods_attr="19673">加入购物车</a>
+							</li>
+							<li class="">
+								<a href="javascript:;" target="_blank" hidefocus="true" class="img" title="金立F6 星夜蓝">
+									<img src="images/shopping/1375_thumb_P_1511678651374.jpg" width="300" height="300" alt="金立F6 星夜蓝">
+								</a>
+								<p class="rvgoodsname">
+									<a href="javascript:;" target="_blank" title="金立F6 星夜蓝">金立F6 星夜蓝</a>
+								</p>
+								<p class="prce">
+									<em>¥</em>1399.00
+								</p>
+								<a href="#" target="_self" class="btn_addcart" goods_id="1375" goods_attr="19673">加入购物车</a>
+							</li>
+							<li class="">
+								<a href="javascript:;" target="_blank" hidefocus="true" class="img" title="金立F6 星夜蓝">
+									<img src="images/shopping/1375_thumb_P_1511678651374.jpg" width="300" height="300" alt="金立F6 星夜蓝">
+								</a>
+								<p class="rvgoodsname">
+									<a href="javascript:;" target="_blank" title="金立F6 星夜蓝">金立F6 星夜蓝</a>
+								</p>
+								<p class="prce">
+									<em>¥</em>1399.00
+								</p>
+								<a href="#" target="_self" class="btn_addcart" goods_id="1375" goods_attr="19673">加入购物车</a>
+							</li>
+						</ul>
+					</div>
+		
+		
+					</div>
+				</div>
 
 	</body>
 </html>

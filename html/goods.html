@@ -26,6 +26,10 @@
 								<a href="#" class="reg">注册</a>
 								<b></b>
 							</span>
+							<!--登录成功后-->
+							<span class="loginReg2" id="JloginReg2" style="display:block">
+								
+							</span>
 							<span class="cart" id="Jcart">
 								<span class="cart_hd">
 									<a href="#" hidefocus="true">
@@ -37,7 +41,20 @@
 									<i class="whitespace"></i>
 								</span>
 								<span class="cart_bd" id="JcartBd">
-									<span class="cart_empty">您的购物车是空的，快去挑选喜欢的商品吧！</span>
+									<div class="cart_empty" style="display:none">您的购物车是空的，快去挑选喜欢的商品吧！</div>
+									<!--购物车部分-->
+									<div class="cart_shopping" style="display:none">
+													
+										<div class="cart-total .clearfix">
+											<span class="total">共 <em class="spl">0</em> 件商品
+													<span class="price">
+														<em class="spp">0</em>元
+													</span>
+											</span>
+												<a href="shopping.html" class="btn btn-primary btn-cart">去购物车结算</a>
+														
+										</div>
+									</div>
 								</span>
 							</span>
 						</div>
@@ -124,23 +141,23 @@
 						<img src="images/goods/closeFix.png" alt="金立" class="closeBuy">
 						<div class="selected">
 							<div class="orig">
-								<img src="images/goods/5.jpg" alt="金立" id="selectedImg">
+								<img src="images/goods/5.jpg" alt="金立" id="selectedImg" class="selectedImg">
 								<div class="blocks">
 									
 								</div>
 							</div>
 							<div class="fd">
-								<img src="images/goods/5.jpg" alt="金立" id="selectedImg">
+								<img src="images/goods/5.jpg" alt="金立" class="selectedImg">
 							</div>
 							<div class="selectedRight">
 								<h3 class="wellcomeH">欢迎购买金立M7手机</h3>
 								<p class="wellcomeP">M7</p>
 								<h3 class="selectColorH">颜色选择</h3>
 									<div class="selectColorDiv">
-										<p class="selectedPhone selectCan fyh" price="2699" pic="5"><span></span>枫叶红</p>
-										<p class="selectNo xbj" price="2683"><span></span>香槟金</p>
-										<p class="selectCan xyh" price="2499" pic="9"><span></span>炫影黑</p>
-										<p class="selectNo xyl" price="2681"><span></span>星耀蓝</p>
+										<p class="selectedPhone selectCan fyh" price="2699" pic="5" data-name="金立M7手机"><span></span>枫叶红</p>
+										<p class="selectNo xbj" price="2683" data-name="金立M7手机"><span></span>香槟金</p>
+										<p class="selectCan xyh" price="2499" pic="9" data-name="金立M7手机"><span></span>炫影黑</p>
+										<p class="selectNo xyl" price="2681" data-name="金立M7手机"><span></span>星耀蓝</p>
 									</div>
 									<h3 class="copy-h3">版本选择</h3>
 									<div class="selectCopy">

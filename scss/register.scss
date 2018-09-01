@@ -229,12 +229,15 @@ button, input, select, textarea {
 }
 input.imgCode-input {
     width: 138px;
+	float:left;
+	margin-left:30px;
 }
 form {
     display: block;
 }
 .form {
     margin-top: 30px;
+	height:250px;
 }
 .vm {
     vertical-align: middle;
@@ -257,12 +260,20 @@ input{
 	display:inline-block;
 }
 #rd{
-	width:20px;
-	height:20px;
+	width:50px;
+	height:30px;
+	float:left;
+	margin-left:20px;
+	margin-top:5px;
+	background:darkgrey;
+	text-align:center;
+	line-height:30px;
+	font-size:16px;
+	color:#757575;
 }
 
-.mt90 {
-    margin-top: 90px;
+#reg1 {
+    margin-top:22px;
 }
 button.submit-btn {
     color: #fff;
@@ -293,11 +304,7 @@ footer{
 	text-align:center;
 }
 /*验证码*/
-#rd{
 
-	border:1px solid red;
-	
-}
 
 .errorCode {
     left: 28px;
@@ -307,4 +314,52 @@ footer{
     color: red;
     font-size: 14px;
     white-space: nowrap;
+}
+
+.mt10 {
+    margin-top: 10px;
+}
+input.smsCode-input {
+    width: 152px;
+	float:left;
+	margin-left:30px;
+}
+button.second-btn {
+    width: 100px;
+    background: #b7b7b7;
+    color: #fff;
+    font-size: 12px;
+    height: 37px;
+}
+.ml5 {
+    margin-left: 5px;
+}
+.reminder {
+    font-size: 11px;
+    color: #888;
+    height: 48px;
+}
+.pr30 {
+    padding-right: 30px;
+}
+.pl30 {
+    padding-left: 30px;
+}
+.error_1,.error_2,.error_3{
+	padding-left:30px;
+}
+em.icon_error {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    margin: -1px 5px 0 0;
+	margin-top:5px;
+    background: url(../images/icons-s.png) 0 -69px no-repeat;
+}
+header ul li.line.selected {
+    background-color: #ff9000;
+}
+.error_11{
+	margin-top:20px;
+	margin-left:30px;
 }
